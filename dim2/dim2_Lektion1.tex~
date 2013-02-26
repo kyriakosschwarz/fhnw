@@ -213,7 +213,8 @@ $"a" + "b" \:!equals\: "b" + "a"$ (nicht equals)\\
 \\
 alle paarweise verschieden\\
 \\
-$V_i \:vom\: Typ\: T_i$\\
+$V_i$ vom Typ: $T_i$\\
+\\
 \\
 - R : boolescher Ausdruck, kann $V_1 ... V_n$ enthalten, Bereich (Range)\\
 \\
@@ -256,6 +257,8 @@ $\rightarrow 2^2 + 1^2 + (-1)^2 + 0^2$\\
 \\
 $\rightarrow$ Topf leer $\rightarrow$ Resultat: Neutrales Element (von +) $\rightarrow$ 0\\
 \\
+\\
+\rule{\textwidth}{0.4mm}\\
 \\
 Beispiele:\\
 \\
