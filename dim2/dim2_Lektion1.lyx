@@ -1,0 +1,945 @@
+#LyX file created by tex2lyx 2.0.3
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\usepackage{amsfonts}\author{kyriakosschwarz}
+\title{Diskrete Mathematik 2}
+
+\end_preamble
+\options 18pt
+\use_default_options false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+Quantifizierung
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\sum_{i=1}^{n}i^2 = 1^2 + 2^2 + ... + n^2 $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{i=1}^{-1}i^2 = 0 $
+\end_inset
+
+ (neutrales Element)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{i=1}^{n}i^2 + 1 = 1^2 + 2^2 + ... + n^2 + 1 $
+\end_inset
+
+ (?)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{i=1}^{n}(i^2 + 1) = (1^2 + 1) + (2^2 + 1) + ... + (n^2 + 1) $
+\end_inset
+
+ (?)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{\substack{i=1\\odd(i)}}^{n}i^2 = 1^2 + 3^2 + ... + n^2 $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\prod_{i=1}^{n}i^2 = 1^2 * 2^2 * ... * n^2 $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\prod_{i=1}^{-1}i^2 = 1 $
+\end_inset
+
+ (neutrales Element)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\forall_{i=0}^{n-1} b[i] == 0 = b[0]==0 \wedge b[1]==0 \wedge ... \wedge b[n-1]==0 $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\exists_{i=0}^{n-1} b[i] == 0 = b[0]==0 \vee b[1]==0 \vee ... \vee b[n-1]==0 $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{i=1}^{n}i^2 = ( \sum{i} : \mathbb{N}  \:\vert\:  1\leqslant i \leqslant n : i^2 ) $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $                    ( \sum{i} : \mathbb{N}, j:\mathbb{N}  \:\vert\:  1\leqslant i \leqslant 2 \wedge 1\leqslant j\leqslant 3 : i^j ) $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $( \circ v_1 : T_1, ... , v_n : T_n \:\vert\: R : P ) $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ - 
+\begin_inset Formula $ \circ : T \times T \rightarrow T $
+\end_inset
+
+ (wobei T ein Typ ist)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ Bsp: 
+\begin_inset Formula $+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $+ (3,4) = 7$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $a \circ b = b \circ a$
+\end_inset
+
+ fuer alle a,b : T (Symmetrie) --- ABELSCHES MONOID
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $(a \circ b) \circ c = a \circ (b \circ c)$
+\end_inset
+
+ fuer alle a,b,c : T (Assoziativitaet)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $u \circ a = a = a \circ u$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ es gibt ein u : T, so dass fuer alle a : T (neutrales Element) --- MONOID
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\circ$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $+\sum$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $*\prod$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $1$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\forall$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $true$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\exists$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $false$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ String mit Konkatenation nicht-abelsches Monoid
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $("a" + "b") + "c" \:equals\: "a" + ("b" + "c")$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $"a" + "" \:equals\: "a"$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $"a" + "b" \:!equals\: "b" + "a"$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ - 
+\begin_inset Formula $T_1, ... , T_n$
+\end_inset
+
+ Datentypen
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ - 
+\begin_inset Formula $V_1, ... , V_n$
+\end_inset
+
+ Variablen
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ alle paarweise verschieden
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $V_i \:vom\: Typ\: T_i$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ - R : boolescher Ausdruck, kann 
+\begin_inset Formula $V_1 ... V_n$
+\end_inset
+
+ enthalten, Bereich (Range)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ - P : beliebiger Ausdruck vom Typ T, kann 
+\begin_inset Formula $V_1 ... V_n$
+\end_inset
+
+ enthalten, Koerper (Body)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ Typ der Quantifizierung : T
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $(\forall i : \mathbb{N} \:\vert\: 0\leqslant i \leqslant n : b[i]=0)$
+\end_inset
+
+ und das Ganze ist : 
+\begin_inset Formula $\mathbb{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $(\circ\: V_1 : T_1 \:\vert\: R : P )$
+\end_inset
+
+ wobei 
+\begin_inset Formula $T_1 : \mathbb{N}, P : \mathbb{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\wedge : \mathbb{B} \times \mathbb{B} \rightarrow \mathbb{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $P : T_1 \times T_2 \times ... \times T_n \rightarrow T$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+
+Semantik
+\end_layout
+
+\begin_layout Standard
+
+Bsp: 
+\begin_inset Formula $(+ i:\mathbb{Z} \:\vert\: -1\leqslant i\leqslant 2 : i^2)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 1. Fall (Topf 
+\begin_inset Formula $\neq \emptyset$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ Von 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ alle Zahlen ausfiltern (-1,0,1,2) (Menge)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow^{1^2} ((-1)^2, 1^2, 0^2, 2^2) (1,1,0,4)$
+\end_inset
+
+ (Multimenge)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow 2^2 + 1^2 + (-1)^2 + 0^2$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 2. Fall (Topf = 0)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Topf leer 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ Resultat: Neutrales Element (von +) 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 0
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ Beispiele:
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 1) 
+\begin_inset Formula $(+ \:i:\mathbb{N} \:\vert\: 0\leqslant i\leqslant 4 : i*8) = (0*8) + (1*8) + ... $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 2) 
+\begin_inset Formula $(* \:i:\mathbb{N} \:\vert\: 0\leqslant i\leqslant 3 : i+1) = (0+1) * (1+1) * ... $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 3) 
+\begin_inset Formula $(\wedge \:i:\mathbb{N} \:\vert\: 0\leqslant i\leqslant 2 : i*d \neq 6) = (0*d) \neq 6 \wedge (1*d) \neq 6 \wedge ...  $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 4) 
+\begin_inset Formula $(\vee \:i:\mathbb{N} \:\vert\: 0\leqslant i\leqslant 21 : b[i]=0) = b[0] = 0 \vee b[1] = 0 \vee ...  $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 5) 
+\begin_inset Formula $(\sum k : \mathbb{N} \:\vert\: k^2 = 4 : k^2) = 2$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 6) 
+\begin_inset Formula $(\sum k : \mathbb{Z} \:\vert\: k^2 = 4 : k^2) = 2 + (-2) = 0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+This is a subsection
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% TODO: This is a comment
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% COMMENT
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
