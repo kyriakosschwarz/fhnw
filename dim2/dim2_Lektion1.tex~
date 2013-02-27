@@ -188,7 +188,7 @@ Bsp: $+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$\\
 $+ (3,4) = 7$\\
 \\
 \\
-$a \circ b = b \circ a$ fuer alle a,b : T (Symmetrie) --- ABELSCHES MONOID\\
+$a \circ b = b \circ a$ fuer alle a,b : T (Symmetrie)(Kommutativitaet) --- ABELSCHES MONOID\\
 $(a \circ b) \circ c = a \circ (b \circ c)$ fuer alle a,b,c : T (Assoziativitaet)\\
 $u \circ a = a = a \circ u$\\
 es gibt ein u : T, so dass fuer alle a : T (neutrales Element) --- MONOID\\
@@ -280,6 +280,10 @@ Beispiele:\\
 6) $(\sum k : \mathbb{Z} \:\vert\: k^2 = 4 : k^2) = 2 + (-2) = 0$\\
 \\
 \\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
 
 \section{2. Woche}
 
