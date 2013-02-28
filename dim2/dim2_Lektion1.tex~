@@ -3,6 +3,9 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
 %\author{kyriakosschwarz}
 \title{Diskrete Mathematik 2}
 
@@ -59,7 +62,6 @@
 }
 %\author{Kyriakos Schwarz}
 \date{FS 2013}
-
 
 
 
@@ -312,8 +314,54 @@ $n = 3 \rightarrow 5$\\
 \\
 $n = 0 \rightarrow 0$\\
 \\
-
-
+\\
+E1: $(\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i< n : i^2 )$\\
+\\
+\\
+E3: $(\sum{i} \:\circled{1} : \mathbb{Z} \:\vert\: 0\leqslant i \:\circled{2} < n : i^2 \:\circled{3} ) + 1 \:\circled{4}$\\
+\\
+$(\leftarrow \rightarrow) :$ Gueltigkeitsbereich von $i$ (scope)\\
+\\
+$i$ tritt hier 4 mal auf (occurs)\\
+\\
+Auftreten (occurances) $\circled{1}, \circled{2}, \circled{3}$ gebunden\\
+Auftreten $\circled{4}$ \uline{frei}\\
+$\circled{2}$ und $\circled{3}$ gebunden an $\circled{1}$\\
+$\circled{2}$ und $\circled{3}$ angewandte Auftreten (applied)\\
+$\circled{1}$ bindende, deklarierende Auftreten (binding)\\
+\\
+\\
+Eine Variable heisst \uline{frei} in einem Ausdruck E (expresion), falls sie in E frei vorkommt.\\
+\\
+\\
+$FV(E) =$ Menge der freie Variablen von E\\
+\\
+$FV(E_3) = \{'n', 'i'\}$ (Die Variablennamen und nicht die Werte der Variablen)\\
+\\
+\\
+$x, y : \mathbb{Z}$\\
+$x = 3, y = 5$\\
+$\{x, y\} = \{3, 5\}$\\
+\\
+$x = y = 3$\\
+$\{x, y\} = \{3\}$\\
+\\
+$x + y * 2$\\
+$y , 2 : *$ Operator\\
+dann das Resultat mit $x$ und $+$ Operator\\
+\\
+\\
+E4: $(\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i< n : i^2 ) * (\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i< n : i^3 )$\\
+\\
+$FV(E_4) = \{'n'\}$\\
+\\
+\\
+E5: $( \prod{n} \:\vert\: k\leqslant n \leqslant l : (\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i< n : i^2 ) * (\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i< n : i^3 ) )$\\
+\\
+$FV(E_5) = \{'k', 'l'\}$\\
+\\
+E6: $(\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i\leqslant (\sum{i} : \mathbb{Z} \:\vert\: 2\leqslant i< 3 : i^2 ) : i^2 )$\\
+\\
 
 
 
