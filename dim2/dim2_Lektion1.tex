@@ -362,6 +362,39 @@ $FV(E_5) = \{'k', 'l'\}$\\
 \\
 E6: $(\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i\leqslant (\sum{i} : \mathbb{Z} \:\vert\: 2\leqslant i< 3 : i^2 ) : i^2 )$\\
 \\
+$FV(E_6) = \emptyset$\\
+\\
+Ein Ausdruck E ohne freie Variablen ($FV(E_6) = \emptyset$ oder $\{\}$) heisst geschlossen\\
+\\
+\\
+ $(\sum{i} : \mathbb{Z} \:\vert\: 1\leqslant i< 2 :  (\sum{j} : \mathbb{Z} \:\vert\: 1\leqslant j< 3 : i + j ) )$\\
+\\
+\uline{$i$ zuerst:}\\
+\\
+$i :$ \tab\tab\tab1 \tab\tab\tab\tab\tab\tab2\\
+\tab $(\sum{j} : \mathbb{Z} \:\vert\: 1\leqslant j< 3 : 1 + j ) + (\sum{j} : \mathbb{Z} \:\vert\: 1\leqslant j< 3 : 2 + j )$\\
+\\
+$j :$ \tab\:1 \tab\:\:\:\:\:\:2 \tab\:\:\:\:\:\:3\tab\tab\:1 \tab\:\:\:\:\:\:\:2 \tab\:\:\:\:\:3\\
+\tab$((1+1)+(1+2)+(1+3)) + ((2+1)+(2+2)+(2+3))$
+\\
+\\
+\uline{$j$ zuerst:}\\
+\\
+$j :$ \tab\tab\tab\tab\tab\:\:\:\:\:1 \tab\:\:\:\:\:\:2 \:\:\:\:\:\tab3\\
+\tab$(\sum{i} : \mathbb{Z} \:\vert\: 1\leqslant i< 2 :  ((i+1)+(i+2)+(i+3)) )$\\
+\\
+$i :$ \tab\tab\tab\:\:\:1 \tab\tab\tab\tab\tab\tab\:\:\:2\\
+\tab$((1+1)+(1+2)+(1+3)) + ((2+1)+(2+2)+(2+3))$\\
+\\
+
+
+
+
+
+
+
+
+
 
 
 
