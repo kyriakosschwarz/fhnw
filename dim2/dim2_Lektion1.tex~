@@ -404,6 +404,73 @@ $i :$ \tab\tab\tab\:\:\:1 \tab\tab\tab\tab\tab\tab\:\:\:2\\
 \\
 \\
 
+\section{Dritte Woche}
+
+\subsection{Saetze zur Quantifizierung}
+
+\uline{Satz} (Dummy renaming)\\
+\\
+$(\circ \:v \:\vert\: R : P ) = (\circ \:w \:\vert\: R[v\leftarrow w] : P[v\leftarrow w] )$\\
+\\
+\uline{Voraussetzung:} $w \:denanhkei??????????????????????? FV(R) ennosh??????????? FV(P)$\\
+\\
+\uline{Dabei:} $E[v\leftarrow F]$ bezeichnet exakt denselben Ausdruck wie $E$, aber alle \uline{freien} Auftreten von $v$ ersetzt durch $(F)$.\\
+\\
+wobei $E, F:$ Ausdruck, $v:$ Variable\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+Bsp: $(i+5)[i\leftarrow j+3] = (j+3)+5$\\
+\\
+wobei $(i+5): E$, $[i: v$, $j+3: F]$\\
+\\
+$(i*5)[i\leftarrow j+3] = (j+3)*5$\\
+\\
+\\
+$(\sum{i} \:\vert\: true : i^2)[i\leftarrow j+3] = (\sum{i} \:\vert\: true : i^2)$\\
+\\
+$(\sum{i} \:\vert\: true : i^2) = (\sum{j} \:\vert\: true : j^2)$\\
+\\
+$= (\sum{j} \:\vert\: true[i\leftarrow j] : i^2[i\leftarrow j])$\\
+\\
+$= (\sum{j} \:\vert\: true : j^2)$\\
+\\
+$42[i\leftarrow j+3] = 42$ "Man kann die Bedeutung des Universums nicht aendern."\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+Bsp: $(\sum{i} \:\vert\: 1\leqslant i< n : i^2 )$\\
+\\
+wobei $i: v$, $(1\leqslant i< n): R$, $i^2: P$\\
+\\
+$= (\sum{j} \:\vert\: (1\leqslant i< n)[i\leftarrow j] : i^2[i\leftarrow j] )$\\
+\\
+wobei $j: w$\\
+\\
+$= (\sum{j} \:\vert\: 1\leqslant j< n : j^2)$\\
+\\
+\\
+\uline{Aber:} Vorsicht:\\
+\\
+$(\sum{i} : \:\vert\: 1\leqslant i< n : i^2 )$\\
+$n=0 : 0(neutral +)$\\
+$n=1 : 1$\\
+\\
+haengt von $n$ ab\\
+\\
+$\neq$\\
+\\
+$(\sum{n} : \:\vert\: 1\leqslant n< n : n^2 )$\\
+$apeiro???????????$ undefiniert\\
+\\
+haengt \uline{nicht} vom $n$ ab\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
 
 
 
