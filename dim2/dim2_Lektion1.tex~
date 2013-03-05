@@ -289,6 +289,8 @@ Beispiele:\\
 
 \section{Zweite Woche}
 
+\subsection{Freie/Gebundene Variablen}
+
 $( \circ \: v_1 : T_1,...,v_n : T_n \:\vert\: R : P )$\\
 \\
 \\
@@ -373,7 +375,7 @@ E6: $(\sum{i} : \mathbb{Z} \:\vert\: 0\leqslant i\leqslant (\sum{i} : \mathbb{Z}
 \\
 $FV(E_6) = \emptyset$\\
 \\
-Ein Ausdruck E ohne freie Variablen ($FV(E_6) = \emptyset$ oder $\{\}$) heisst geschlossen\\
+Ein Ausdruck E ohne freie Variablen ($FV(E) = \emptyset$ oder $\{\}$) heisst geschlossen\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
