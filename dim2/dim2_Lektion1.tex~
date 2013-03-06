@@ -412,7 +412,7 @@ $i :$ \tab\tab\tab\:\:\:1 \tab\tab\tab\tab\tab\tab\:\:\:2\\
 \\
 $(\circ \:v \:\vert\: R : P ) = (\circ \:w \:\vert\: R[v\leftarrow w] : P[v\leftarrow w] )$\\
 \\
-\uline{Voraussetzung:} $w \:\notin FV(R) ennosh??????????? FV(P)$\\
+\uline{Voraussetzung:} $w \:\notin FV(R)\cup FV(P)$\\
 \\
 \uline{Dabei:} $E[v\leftarrow F]$ bezeichnet exakt denselben Ausdruck wie $E$, aber alle \uline{freien} Auftreten von $v$ ersetzt durch $(F)$.\\
 \\
@@ -424,6 +424,7 @@ wobei $E, F:$ Ausdruck, $v:$ Variable\\
 Bsp: $(i+5)[i\leftarrow j+3] = (j+3)+5$\\
 \\
 wobei $(i+5): E$, $[i: v$, $j+3: F]$\\
+\\
 \\
 $(i*5)[i\leftarrow j+3] = (j+3)*5$\\
 \\
@@ -441,28 +442,28 @@ $42[i\leftarrow j+3] = 42$ "Man kann die Bedeutung des Universums nicht aendern.
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
-Bsp: $(\sum{i} \:\vert\: 1\leqslant i< n : i^2 )$\\
+Bsp: $(\sum{i} \:\vert\: 1\leqslant i\leqslant n : i^2 )$\\
 \\
-wobei $i: v$, $(1\leqslant i< n): R$, $i^2: P$\\
+wobei $i: v$, $(1\leqslant i\leqslant n): R$, $i^2: P$\\
 \\
-$= (\sum{j} \:\vert\: (1\leqslant i< n)[i\leftarrow j] : i^2[i\leftarrow j] )$\\
+$= (\sum{j} \:\vert\: (1\leqslant i\leqslant n)[i\leftarrow j] : i^2[i\leftarrow j] )$\\
 \\
 wobei $j: w$\\
 \\
-$= (\sum{j} \:\vert\: 1\leqslant j< n : j^2)$\\
+$= (\sum{j} \:\vert\: 1\leqslant j\leqslant n : j^2)$\\
 \\
 \\
 \uline{Aber:} Vorsicht:\\
 \\
-$(\sum{i} : \:\vert\: 1\leqslant i< n : i^2 )$\\
-$n=0 : 0(neutral +)$\\
-$n=1 : 1$\\
+$(\sum{i} : \:\vert\: 1\leqslant i\leqslant n : i^2 )$\\
+$n=0 , \tab 0(neutral +)$\\
+$n=1 , \tab 1$\\
 \\
 haengt von $n$ ab\\
 \\
 $\neq$\\
 \\
-$(\sum{n} : \:\vert\: 1\leqslant n< n : n^2 )$\\
+$(\sum{n} : \:\vert\: 1\leqslant n\leqslant n : n^2 )$\\
 $\infty$ undefiniert\\
 \\
 haengt \uline{nicht} vom $n$ ab\\
