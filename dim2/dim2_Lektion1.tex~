@@ -446,6 +446,33 @@ $42[i\leftarrow j+3] = 42$ "Man kann die Bedeutung des Universums nicht aendern.
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
+Es ist ein Unterschied, ob die Ersetzung innerhalb oder ausserhalb einer Quantifizierung angegeben wird.\\
+\\
+$(\sum{i} \:\vert\: true : i^2)[i \leftarrow j + 3]$\\
+\\
+Hier sollen alle freien Auftreten von Variable $i$ in $(\sum{i} \:\vert\: true : i^2)$ durch $j + 3$ ersetzt werden.\\
+Aber alle Auftreten von $i$ sind in diesem Ausdruck gebunden, also ist nichts zu ersetzen.\\
+\\
+Dummy renaming sagt aus, dass wir die gebundenen Auftreten einer Variablen innerhalb einer Quantifizierung\\
+konsistent umbenennen duerfen, solange wir dabei keine freien Variablen einfangen.\\
+\\
+$(\sum{i} \:\vert\: 1\leqslant i \leqslant n : i^2)$\\
+$= (\sum{j} \:\vert\: 1\leqslant i \leqslant n[i \leftarrow j]: i^2[i \leftarrow j])$\\
+$= (\sum{j} \:\vert\: 1\leqslant j \leqslant n : j^2)$\\
+\\
+Hier sind die Ersetzungen innerhalb der Quantifizierung.\\  
+Und beachten Sie: im Teilausdruck $1\leqslant i\leqslant n$ ist die Variable $i$ frei,\\
+daher liefert $1\leqslant i\leqslant n[i \leftarrow j]$ den Ausdruck $1\leqslant j\leqslant n$\\
+\\
+Im Gesamtausdruck $(\sum{i} \:\vert\: true : i^2)$ sind alle Auftreten von $i$ hingegen gebunden.\\
+Aber in diesem Ausdruck wollen wir auch nicht ersetzen, sondern eben in den beiden Teilausdruecken.\\
+\\
+Ein Auftreten einer Variablen kann in einem Teilausdruck frei sein, aber im Gesamtausdruck gebunden.\\
+Ob ein Auftreten frei oder gebunden ist, hängt immer vom betrachteten (Teil-)Ausdruck ab.\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 Bsp: $(\sum{i} \:\vert\: 1\leqslant i\leqslant n : i^2 )$\\
 \\
 wobei $i: v$, $(1\leqslant i\leqslant n): R$, $i^2: P$\\
