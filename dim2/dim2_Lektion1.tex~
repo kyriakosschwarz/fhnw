@@ -503,8 +503,100 @@ haengt \uline{nicht} von $n$ ab\\
 \rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Vierte Woche}
 
+\subsection{???}
 
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow n^2] = (\sum{i} \:\vert\: 0\leqslant i\leqslant n^2 : i^2)$\\
+\\
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1] \neq (\sum{i} \:\vert\: 0\leqslant i\leqslant i+1 : i^2)$\\
+freies Auftreten von $i$ wird gefangen $\rightarrow$ name clash\\
+\\
+\\
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j\leqslant n : j^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j\leqslant i+1 : j^2)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Empty range}\\
+\\
+$(\circ \:v \:\vert\: false : P ) = u_\circ$ (Neutrales Element)\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{One point}\\
+\\
+Voraussetzung: $v \:\notin FV(E)$\\
+\\
+$(\circ \:v \:\vert\: v = E : P ) = P[v\leftarrow E]$\\
+\\
+Bsp. $(\sum{i} \:\vert\: i = j + 3 : i^2) = i^2[i\leftarrow j+3] = (j+3)^2$\\
+\\
+\tab $(\sum{i} \:\vert\: i = j + i + 3 : i^2) \neq i^2[i\leftarrow j+i+3] = (j+i+3)^2$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Split-off term}\\
+\\
+$(\circ \:i \:\vert\: 0\leqslant i < n+1 : P) = (\circ \:i \:\vert\: 0\leqslant i < n : P) \circ P[i\leftarrow n]$\\
+\\
+Bsp. $(\sum{i} \:\vert\: 0\leqslant i < n+1 : i^2) \tab = (\sum{i} \:\vert\: 0\leqslant i < n : i^2) + n^2$\\
+\tab $0^2 + 1^2 + ... + (n-1)^2 + n^2 \:\:\:= (0^2 + 1^2 + ... + (n-1)^2) + n^2$\\
+\\
+$n=0 :$\\
+\tab $(\circ \:i \:\vert\: 0\leqslant i < 1 : P) = (\circ \:i \:\vert\: 0\leqslant i < 0 : P) \circ P[i\leftarrow 0]$\\
+\tab $i=0 :$\\
+\tab \tab $P[i\leftarrow 0]$ (One point) $= u_\circ \circ P[i\leftarrow 0]$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\subsection{Anwendung}
+
+\uline{Praedikat}\\
+\\
+$i+1 > j : Bool$ macht Aussage ueber Werte von freien Variablen\\
+\\
+Feld $b[0...n-1]$ mit ganzen Zahlen$; n\geqslant 0$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt eine $-1$." $\rightarrow$ bedeutet mindestens\\
+\\
+$(\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] = -1)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt genau eine $-1$."\\
+\\
+$(\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : (b[i] = -1) \wedge (\forall{i} : \mathbb{N} \:\vert\: (0\leqslant j < n) \wedge (j\neq i) : b[j] \neq -1 ))$\\
+\\
+$=$\\
+\\
+$1 = (\sum{i} : \mathbb{N} \:\vert\: (0\leqslant i < n) \wedge (b[i] = -1 : 1)$\\
+\tab \tab \tab \tab \tab \:\:\:$\&\&$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt keine $-1$."\\
+\\
+$(\forall{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] \neq -1)$\\
+\\
+$=$\\
+\\
+$\neg (\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] = -1)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 
 

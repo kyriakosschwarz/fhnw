@@ -190,10 +190,14 @@ Bsp: $+ : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$\\
 $+ (3,4) = 7$\\
 \\
 \\
-$a \circ b = b \circ a$ fuer alle a,b : T (Symmetrie)(Kommutativitaet) --- ABELSCHES MONOID\\
-$(a \circ b) \circ c = a \circ (b \circ c)$ fuer alle a,b,c : T (Assoziativitaet)\\
-$u \circ a = a = a \circ u$\\
-es gibt ein u : T, so dass fuer alle a : T (neutrales Element) --- MONOID\\
+ABELSCHES MONOID$\begin{cases} 
+  a \circ b = b \circ a $ fuer alle $ a,b : T $ (Symmetrie)(Kommutativitaet)$\\
+  MONOID\begin{cases}
+    (a \circ b) \circ c = a \circ (b \circ c) $ fuer alle $ a,b,c : T $ (Assoziativitaet)$\\
+    u \circ a = a = a \circ u\\
+    $ es gibt ein $u : T$, so dass fuer alle $ a : T $ (neutrales Element)$\\
+  \end{cases}
+\end{cases}$\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
@@ -209,7 +213,7 @@ es gibt ein u : T, so dass fuer alle a : T (neutrales Element) --- MONOID\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
-String mit Konkatenation nicht-abelsches Monoid\\
+String mit Konkatenation: Nicht-abelsches Monoid\\
 $("a" + "b") + "c" \:equals\: "a" + ("b" + "c")$\\
 $"a" + "" \:equals\: "a"$\\
 $"a" + "b" \:!equals\: "b" + "a"$ (nicht equals)\\
@@ -412,7 +416,7 @@ $i :$ \tab\tab\tab\:\:\:1 \tab\tab\tab\tab\tab\tab\:\:\:2\\
 \\
 $(\circ \:v \:\vert\: R : P ) = (\circ \:w \:\vert\: R[v\leftarrow w] : P[v\leftarrow w] )$\\
 \\
-\uline{Voraussetzung:} $w \:denanhkei??????????????????????? FV(R) \vee FV(P)$\\
+\uline{Voraussetzung:} $w \:\notin FV(R)\cup FV(P)$\\
 \\
 \uline{Dabei:} $E[v\leftarrow F]$ bezeichnet exakt denselben Ausdruck wie $E$, aber alle \uline{freien} Auftreten von $v$ ersetzt durch $(F)$.\\
 \\
@@ -423,15 +427,17 @@ wobei $E, F:$ Ausdruck, $v:$ Variable\\
 \\
 Bsp: $(i+5)[i\leftarrow j+3] = (j+3)+5$\\
 \\
-wobei $(i+5): E$, $i: v$, $(j+3): F$\\
+wobei $(i+5): E$, $[i: v$, $j+3: F]$\\
+\\
 \\
 $(i*5)[i\leftarrow j+3] = (j+3)*5$\\
+\\
 \\
 $(\sum{i} \:\vert\: true : i^2)[i\leftarrow j+3] = (\sum{i} \:\vert\: true : i^2)$\\
 \\
 $(\sum{i} \:\vert\: true : i^2) = (\sum{j} \:\vert\: true : j^2)$\\
 \\
-$= (\sum{i} \:\vert\: true[i\leftarrow j] : i^2[i\leftarrow j])$\\
+$= (\sum{j} \:\vert\: true[i\leftarrow j] : i^2[i\leftarrow j])$\\
 \\
 $= (\sum{j} \:\vert\: true : j^2)$\\
 \\
@@ -440,15 +446,108 @@ $42[i\leftarrow j+3] = 42$ "Man kann die Bedeutung des Universums nicht aendern.
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
-Bsp: $(\sum{i} : \mathbb{Z} \:\vert\: 1\leqslant i< n : i^2 )$\\
+Es ist ein Unterschied, ob die Ersetzung innerhalb oder ausserhalb einer Quantifizierung angegeben wird.\\
 \\
-wobei $i: v$, $(1\leqslant i< n): R$, $i^2: P$\\
+$(\sum{i} \:\vert\: true : i^2)[i \leftarrow j + 3]$\\
 \\
-$= (\sum{i} : \mathbb{Z} \:\vert\: (1\leqslant i< n)[i\leftarrow j] : i^2[i\leftarrow j] )$\\
+Hier sollen alle freien Auftreten von Variable $i$ in $(\sum{i} \:\vert\: true : i^2)$ durch $j + 3$ ersetzt werden.\\
+Aber alle Auftreten von $i$ sind in diesem Ausdruck gebunden, also ist nichts zu ersetzen.\\
+\\
+Dummy renaming sagt aus, dass wir die gebundenen Auftreten einer Variablen innerhalb einer Quantifizierung\\
+konsistent umbenennen duerfen, solange wir dabei keine freien Variablen einfangen.\\
+\\
+$(\sum{i} \:\vert\: 1\leqslant i \leqslant n : i^2)$\\
+$= (\sum{j} \:\vert\: 1\leqslant i \leqslant n[i \leftarrow j]: i^2[i \leftarrow j])$\\
+$= (\sum{j} \:\vert\: 1\leqslant j \leqslant n : j^2)$\\
+\\
+Hier sind die Ersetzungen innerhalb der Quantifizierung.\\  
+Und beachten Sie: im Teilausdruck $1\leqslant i\leqslant n$ ist die Variable $i$ frei,\\
+daher liefert $1\leqslant i\leqslant n[i \leftarrow j]$ den Ausdruck $1\leqslant j\leqslant n$\\
+\\
+Im Gesamtausdruck $(\sum{i} \:\vert\: true : i^2)$ sind alle Auftreten von $i$ hingegen gebunden.\\
+Aber in diesem Ausdruck wollen wir auch nicht ersetzen, sondern eben in den beiden Teilausdruecken.\\
+\\
+Ein Auftreten einer Variablen kann in einem Teilausdruck frei sein, aber im Gesamtausdruck gebunden.\\
+Ob ein Auftreten frei oder gebunden ist, hängt immer vom betrachteten (Teil-)Ausdruck ab.\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+Bsp: $(\sum{i} \:\vert\: 1\leqslant i\leqslant n : i^2 )$\\
+\\
+wobei $i: v$, $(1\leqslant i\leqslant n): R$, $i^2: P$\\
+\\
+$= (\sum{j} \:\vert\: (1\leqslant i\leqslant n)[i\leftarrow j] : i^2[i\leftarrow j] )$\\
+\\
+wobei $j: w$\\
+\\
+$= (\sum{j} \:\vert\: 1\leqslant j\leqslant n : j^2)$\\
+\\
+\\
+\uline{Aber:} Vorsicht:\\
+\\
+$(\sum{i} : \:\vert\: 1\leqslant i\leqslant n : i^2 )$\\
+$n=0 , \tab 0(neutral +)$\\
+$n=1 , \tab 1$\\
+\\
+haengt von $n$ ab\\
+\\
+$\neq$\\
+\\
+$(\sum{n} : \:\vert\: 1\leqslant n\leqslant n : n^2 )$\\
+$\infty$ undefiniert\\
+\\
+haengt \uline{nicht} von $n$ ab\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Vierte Woche}
 
+\subsection{???}
 
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow n^2] = (\sum{i} \:\vert\: 0\leqslant i\leqslant n^2 : i^2)$\\
+\\
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1] \neq (\sum{i} \:\vert\: 0\leqslant i\leqslant i+1 : i^2)$\\
+freies Auftreten von $i$ wird gefangen $\rightarrow$ name clash\\
+\\
+\\
+$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j\leqslant n : j^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j\leqslant i+1 : j^2)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Empty range}\\
+\\
+$(\circ \:v \:\vert\: false : P ) = u_\circ$ (Neutrales Element)\\
+\\
+\\
+\uline{One point}\\
+\\
+Voraussetzung: $v \:\notin FV(E)$\\
+\\
+$(\circ \:v \:\vert\: v = E : P ) = P[v\leftarrow E]$\\
+\\
+Bsp. $(\sum{i} \:\vert\: i = j + 3 : i^2) = i^2[i\leftarrow j+3] = (j+3)^2$\\
+\\
+\tab $(\sum{i} \:\vert\: i = j + i + 3 : i^2) \neq i^2[i\leftarrow j+i+3] = (j+i+3)^2$\\
+\\
+\\
+\uline{Split-off term}\\
+\\
+$(\circ \:i \:\vert\: 0\leqslant i < n+1 : P) = (\circ \:i \:\vert\: 0\leqslant i < n : P) \circ P[i\leftarrow n]$\\
+\\
+Bsp. $(\sum{i} \:\vert\: 0\leqslant i < n+1 : i^2) \tab = (\sum{i} \:\vert\: 0\leqslant i < n : i^2) + n^2$\\
+\tab $0^2 + 1^2 + ... + (n-1)^2 + n^2 \:\:\:= (0^2 + 1^2 + ... + (n-1)^2) + n^2$\\
+\\
+$n=0 :$\\
+\tab $(\circ \:i \:\vert\: 0\leqslant i < 1 : P) = (\circ \:i \:\vert\: 0\leqslant i < 0 : P) \circ P[i\leftarrow 0]$\\
+\tab $i=0 :$\\
+\tab \tab $P[i\leftarrow 0]$ (One point) $= u_\circ \circ P[i\leftarrow 0]$\\
+\\
 
 
 
