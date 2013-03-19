@@ -505,17 +505,17 @@ haengt \uline{nicht} von $n$ ab\\
 
 \section{Vierte Woche}
 
-\subsection{???}
+\subsection{Saetze zur Quantifizierung (Fortsetzung)}
 
-$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow n^2] = (\sum{i} \:\vert\: 0\leqslant i\leqslant n^2 : i^2)$\\
+$(\sum{i} \:\vert\: 0\leqslant i < n : i^2)[n\leftarrow n^2] = (\sum{i} \:\vert\: 0\leqslant i < n^2 : i^2)$\\
 \\
-$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1] \neq (\sum{i} \:\vert\: 0\leqslant i\leqslant i+1 : i^2)$\\
+$(\sum{i} \:\vert\: 0\leqslant i < n : i^2)[n\leftarrow i+1] \neq (\sum{i} \:\vert\: 0\leqslant i < i+1 : i^2)$ (geht nicht)\\
 freies Auftreten von $i$ wird gefangen $\rightarrow$ name clash\\
 \\
 \\
-$(\sum{i} \:\vert\: 0\leqslant i\leqslant n : i^2)[n\leftarrow i+1]$\\
-$= (\sum{j} \:\vert\: 0\leqslant j\leqslant n : j^2)[n\leftarrow i+1]$\\
-$= (\sum{j} \:\vert\: 0\leqslant j\leqslant i+1 : j^2)$\\
+$(\sum{i} \:\vert\: 0\leqslant i < n : i^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j < n : j^2)[n\leftarrow i+1]$\\
+$= (\sum{j} \:\vert\: 0\leqslant j < i+1 : j^2)$\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
@@ -525,6 +525,8 @@ $= (\sum{j} \:\vert\: 0\leqslant j\leqslant i+1 : j^2)$\\
 $(\circ \:v \:\vert\: false : P ) = u_\circ$ (Neutrales Element)\\
 \\
 \\
+\rule{\textwidth}{0.4mm}\\
+\\
 \uline{One point}\\
 \\
 Voraussetzung: $v \:\notin FV(E)$\\
@@ -533,8 +535,10 @@ $(\circ \:v \:\vert\: v = E : P ) = P[v\leftarrow E]$\\
 \\
 Bsp. $(\sum{i} \:\vert\: i = j + 3 : i^2) = i^2[i\leftarrow j+3] = (j+3)^2$\\
 \\
-\tab $(\sum{i} \:\vert\: i = j + i + 3 : i^2) \neq i^2[i\leftarrow j+i+3] = (j+i+3)^2$\\
+\tab $(\sum{i} \:\vert\: i = j + i + 3 : i^2) \neq i^2[i\leftarrow j+i+3] = (j+i+3)^2$ (geht nicht)\\
 \\
+\\
+\rule{\textwidth}{0.4mm}\\
 \\
 \uline{Split-off term}\\
 \\
@@ -546,8 +550,63 @@ Bsp. $(\sum{i} \:\vert\: 0\leqslant i < n+1 : i^2) \tab = (\sum{i} \:\vert\: 0\l
 $n=0 :$\\
 \tab $(\circ \:i \:\vert\: 0\leqslant i < 1 : P) = (\circ \:i \:\vert\: 0\leqslant i < 0 : P) \circ P[i\leftarrow 0]$\\
 \tab $i=0 :$\\
-\tab \tab $P[i\leftarrow 0]$ (One point) $= u_\circ \circ P[i\leftarrow 0]$\\
+\tab \tab $P[i\leftarrow 0]$ (One point) $= u_\circ $(empty range)$  \:\circ P[i\leftarrow 0]$\\
 \\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\subsection{Anwendung}
+
+\uline{Praedikat}\\
+\\
+$i+1 > j : Bool$ macht Aussage ueber Werte von freien Variablen\\
+\\
+Feld $b[0...n-1]$ mit ganzen Zahlen$; n\geqslant 0$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt eine $-1$." $\rightarrow$ bedeutet mindestens\\
+\\
+$(\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] = -1)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt genau eine $-1$."\\
+\\
+$(\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : (b[i] = -1) \wedge (\forall{j} : \mathbb{N} \:\vert\: (0\leqslant j < n) \wedge (j\neq i) : b[j] \neq -1 ))$\\
+\\
+$=$\\
+\\
+$1 = (\sum{i} : \mathbb{N} \:\vert\: (0\leqslant i < n) \wedge (b[i] = -1 : 1)$\\
+\tab \tab \tab \tab \tab \:\:\:$\&\&$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+"$b$ enthaelt keine $-1$."\\
+\\
+$(\forall{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] \neq -1)$\\
+\\
+$=$\\
+\\
+$\neg (\exists{i} : \mathbb{N} \:\vert\: 0\leqslant i < n : b[i] = -1) \rightarrow$ ($\neg$ ("$b$ enthaelt mindestens eine $-1$.")) \\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$\neg (\exists{v} \:\vert\: R : P) = (\forall{v} \:\vert\: R : \neg P)$\\
+$\neg (\forall{v} \:\vert\: R : P) = (\exists{v} \:\vert\: R : \neg P)$\\
+\\
+\\
+\\
+de Morgan\\
+$\neg (\exists{v} \:\vert\: R : P) = \neg (P_0 \vee P_1 \vee ... \vee P_{n-1} \vee P_n) $\\
+\tab \tab \tab $= ((\neg P_0) \wedge (\neg P_1) \wedge ... (\neg P_n))$\\
+\tab \tab \tab $= (\forall{v} \:\vert\: R : \neg P)$\\
+
 
 
 

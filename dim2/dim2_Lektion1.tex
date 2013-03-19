@@ -606,10 +606,81 @@ de Morgan\\
 $\neg (\exists{v} \:\vert\: R : P) = \neg (P_0 \vee P_1 \vee ... \vee P_{n-1} \vee P_n) $\\
 \tab \tab \tab $= ((\neg P_0) \wedge (\neg P_1) \wedge ... (\neg P_n))$\\
 \tab \tab \tab $= (\forall{v} \:\vert\: R : \neg P)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
+\section{Fuenfte Woche}
 
+\subsection{Magisches Quadrat}
 
+\uline{Uebungsblatt 2, Aufgabe 3}\\
+\\
+$k,i: 1\leqslant k\leqslant n, 1\leqslant i\leqslant n$\\
+\\
+$(\exists{M} : N \:\vert\: true : (\forall{i} \:\vert\: 1\leqslant i\leqslant n :(\sum{k} \:\vert\: 1\leqslant k\leqslant n : Q[i,k]) = M $\\
+\tab\tab\tab\tab\tab\tab\tab $\wedge (\sum{k} \:\vert\: 1\leqslant k\leqslant n : Q[k,i]) = M$ \\
+\tab\tab\tab\tab\tab\tab\tab $\wedge (\sum{k} \:\vert\: 1\leqslant k\leqslant n : Q[k,k]) = M$ \\
+\tab\tab\tab\tab\tab\tab\tab $\wedge (\sum{k} \:\vert\: 1\leqslant k\leqslant n : Q[k,(n+1)-k)]) = M$\\
+\tab\tab\tab\tab\tab\tab\tab $\wedge (\forall{m} : N \:\vert\: 1\leqslant m\leqslant n^2 :$\\
+\tab\tab\tab\tab\tab\tab\tab\tab $(\exists{i,j} \:\vert\: 1\leqslant i < n\wedge 1\leqslant j < n: m = Q[i,j])))$ \\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
+\subsection{Aequivalenz}
+
+Math symbols????????????????????????????????????????????????????????\\
+
+\subsection{Mathematische Induktion}
+
+$(\mathbb{B}: Boolean)$\\
+\\
+Sei $P : \mathbb{N} \rightarrow \mathbb{B}$\\
+zu zeigen:\\
+$(\forall{n} : \mathbb{N} \:\vert\: true : P(n) )$\\
+\\
+\uline{Beispiel}\\
+\\
+$P(n): n^3 + 5*n$ ist ein Vielfaches von $6$\\
+\\
+$z$ ist Vielfaches von $6$ heisst:\\
+$(\exists{i} : \mathbb{Z} \:\vert\: true : i*6  = z)$\\
+\\
+$0^3 + 5*n = 0$(Zeuge) $*\:6$\\
+$1^3 + 5*n = 1*6$\\
+$2^3 + 5*n = 2*6$  (Muss bei allen $true$ zurueck geben!!)\\
+\\
+\\
+\uline{Idee: Induktionsprinzip}\\
+\\
+Man zeigt:\\
+\\
+1) $P(0)$\\
+\\
+2) $P(n) pfeil??????? P(n+1)$ fuer alle $n : \mathbb{N}$\\
+\\
+$P(0)$ gilt: Wegen 1)\\
+\\
+$(P(0) \wedge (P(0) pfeil????? P(1)) pfeil?????? P(1)$\\
+\tab wegen 2) mit $n=0$\\
+\\
+$(P(1) \wedge (P(1) pfeil????? P(2)) pfeil?????? P(2)$\\
+\tab wegen 2) mit $n=1$\\
+\\
+Damit gilt $P(n)$ fuer alle $n:\mathbb{N}$\\
+\\
+\\
+\uline{Unser Beispiel}\\
+\\
+1) \uline{Induktionsanfang} (Base case)\\
+zu zeigen: $P(0)$\\
+$0^3 + 5*n = 0$(Zeuge) $*\:6$\\
+\\
+2) \uline{Induktionsschritt} (inductive step)\\
+\\
 
 
 
