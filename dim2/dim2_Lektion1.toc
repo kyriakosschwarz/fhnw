@@ -7,5 +7,5 @@
 \contentsline {section}{\numberline {3}Dritte Woche}{6}
 \contentsline {subsection}{\numberline {3.1}Saetze zur Quantifizierung}{6}
 \contentsline {section}{\numberline {4}Vierte Woche}{8}
-\contentsline {subsection}{\numberline {4.1}???}{8}
+\contentsline {subsection}{\numberline {4.1}Saetze zur Quantifizierung (Fortsetzung)}{8}
 \contentsline {subsection}{\numberline {4.2}Anwendung}{9}
