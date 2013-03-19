@@ -654,20 +654,20 @@ $1^3 + 5*n = 1*6$\\
 $2^3 + 5*n = 2*6$  (Muss bei allen $true$ zurueck geben!!)\\
 \\
 \\
-\uline{Idee: Induktionsprinzip}\\
+\uline{Idee:} \uline{Induktionsprinzip}\\
 \\
 Man zeigt:\\
 \\
 1) $P(0)$\\
 \\
-2) $P(n) pfeil??????? P(n+1)$ fuer alle $n : \mathbb{N}$\\
-\\
+2) $P(n) \Rightarrow P(n+1)$ fuer alle $n : \mathbb{N}$\\
 \\
 $P(0)$ gilt: Wegen 1)\\
-$(P(0) \wedge (P(0) pfeil????? P(1)) pfeil?????? P(1)$\\
+\\
+$(P(0) \wedge (P(0) \Rightarrow P(1)) \Rightarrow P(1)$\\
 \tab wegen 2) mit $n=0$\\
 \\
-$(P(1) \wedge (P(1) pfeil????? P(2)) pfeil?????? P(2)$\\
+$(P(1) \wedge (P(1) \Rightarrow P(2)) \Rightarrow P(2)$\\
 \tab wegen 2) mit $n=1$\\
 \\
 Damit gilt $P(n)$ fuer alle $n:\mathbb{N}$\\
@@ -680,6 +680,29 @@ zu zeigen: $P(0)$\\
 $0^3 + 5*n = 0$(Zeuge) $*\:6$\\
 \\
 2) \uline{Induktionsschritt} (inductive step)\\
+zu zeigen: $P(n) \Rightarrow P(n+1)$ fuer alle $n:\mathbb{N}$\\
+\\
+Sei $n$ eine \uline{beliebige} natuerliche Zahl.\\
+\\
+\uline{Annahme}: Es gaelte $P(n) : n^3 + 5 * n$, dass heisst $n^3 + 5 * n = 6 * r$, ist vielfaches von $6$\\
+zu zeigen: (unter diese Annahme) $P(n+1): (n+1)^3 + 5 * (n+1)$ ist vielfaches von $6$\\
+das heisst: $(n+1)^3 + 5 * (n+1) = 6 * s$ mit $s: \mathbb{Z}$\\
+\\
+$(n+1)^3 + 5 * (n+1)$\\
+\tab $<$Arith$>$ \\
+$= (n^3 + 3*n^2 + 3*n +1) + (5*n + 5)$\\
+\tab $<$Arith + Kaninchen$>$ \\
+$= (n^3 + 5*n) + (3*n^2 + 3*n + 6)$\\
+\tab $<$Annahme$>$\\
+$= 6*r + 3*n^2 + 3*n + 6$\\
+\tab $<$Arith + Kaninchen$>$\\
+$= 6*r + 3*n*(n+1) + 6$\\
+\tab $<$n*(n+1) ist gerade$>$\\
+$= 6*r + 3*(2*t) + 6$\\
+\tab $<$Arith$>$\\
+$= 6*(r+t+1)$ (Zeuge) \checkmark \\
+\\
+
 
 
 
