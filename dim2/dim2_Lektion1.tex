@@ -707,17 +707,29 @@ zu zeigen: (unter diese Annahme) $P(n+1): (n+1)^3 + 5 * (n+1)$ ist vielfaches vo
 das heisst: $(n+1)^3 + 5 * (n+1) = 6 * s$ mit $s: \mathbb{Z}$\\
 \\
 $(n+1)^3 + 5 * (n+1)$\\
+\\
 \tab $<$Arith$>$ \\
+\\
 $= (n^3 + 3*n^2 + 3*n +1) + (5*n + 5)$\\
+\\
 \tab $<$Arith + Kaninchen$>$ \\
+\\
 $= (n^3 + 5*n) + (3*n^2 + 3*n + 6)$\\
+\\
 \tab $<$Annahme$>$\\
+\\
 $= 6*r + 3*n^2 + 3*n + 6$\\
+\\
 \tab $<$Arith + Kaninchen$>$\\
+\\
 $= 6*r + 3*n*(n+1) + 6$\\
+\\
 \tab $<$n*(n+1) ist gerade$>$\\
+\\
 $= 6*r + 3*(2*t) + 6$\\
+\\
 \tab $<$Arith$>$\\
+\\
 $= 6*(r+t+1)$ (Zeuge) \checkmark \\
 \\
 \\
@@ -725,7 +737,13 @@ $= 6*(r+t+1)$ (Zeuge) \checkmark \\
 \\
 \uline{Modus ponens}\\
 \\
-TAble?????????????????????\\
+\begin{tabular}{ l c r }
+  $p$ & $q$ & $(p\wedge (p\Rightarrow q)) \Rightarrow q$ \\
+  $f$ & $f$ & $w\:\:\:\:\:$ \\
+  $f$ & $w$ & $w\:\:\:\:\:$ \\
+  $w$ & $f$ & $w\:\:\:\:\:$ \\
+  $w$ & $w$ & $w\:\:\:\:\:$
+\end{tabular}
 \\
 \\
 \\
