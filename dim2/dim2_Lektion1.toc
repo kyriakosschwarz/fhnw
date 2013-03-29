@@ -12,3 +12,5 @@
 \contentsline {section}{\numberline {5}Fuenfte Woche}{10}
 \contentsline {subsection}{\numberline {5.1}Magisches Quadrat}{10}
 \contentsline {subsection}{\numberline {5.2}Mathematische Induktion}{10}
+\contentsline {section}{\numberline {6}Sechste Woche}{12}
+\contentsline {subsection}{\numberline {6.1}Vollstaendige Induktion}{12}

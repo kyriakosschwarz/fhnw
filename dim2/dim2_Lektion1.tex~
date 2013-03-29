@@ -699,7 +699,7 @@ $= (n^3 + 3*n^2 + 3*n +1) + (5*n + 5)$\\
 \\
 \tab $<$Arith + Kaninchen$>$ \\
 \\
-$= (n^3 + 5n) + (3n^2 + 3n + 6)$\\
+$= (n^3 + 5*n) + (3*n^2 + 3*n + 6)$\\
 \\
 \tab $<$Annahme$>$\\
 \\
@@ -754,7 +754,43 @@ Sei $\neg p$ Analog\\
 \rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Sechste Woche}
 
+\subsection{Vollstaendige Induktion}
+
+\uline{Arbeitsblatt 1 - Aufgabe 1}\\
+\\
+$(P(0)\wedge (\forall{n} : \mathbb{N} \:\vert\: P(n) \Rightarrow P(n+1)) \Rightarrow (\forall{n} : \mathbb{N} \:\vert\: : P(n))$\\
+\\
+wobei $P(0)$ : Base Case\\
+\tab $(\forall{n} : \mathbb{N} \:\vert\: P(n) \Rightarrow P(n+1))$ : Iductive Case\\
+\tab $(\forall{n} : \mathbb{N} \:\vert : P(n))$ : Ziel der Induktion\\
+\\
+\\
+\uline{Complete Induction}\\
+\\
+$P(0)$\\
+$(P(0) \wedge (P(0) \Rightarrow P(1))) \Rightarrow P(1)$\\
+$(P(0) \wedge P(1) \wedge (P(0) \wedge P(1) \Rightarrow P(2)) \Rightarrow P(2)$\\
+$(P(0) \wedge P(1) \wedge P(2) \wedge (P(0) \wedge P(1) \wedge P(2) \Rightarrow P(3)) \Rightarrow P(3)$\\
+\\
+$(P(0)\wedge (\forall{n} : \mathbb{N} \:\vert\: (\forall{k} : \mathbb{N} \:\vert : k\leqslant n : P(k)) \Rightarrow P(n+1)) \Rightarrow (\forall{n} : \mathbb{N} \:\vert\: : P(n))$\\
+\\
+\\
+\uline{Aufgabe 2}\\
+\\
+$(P(k)\wedge (\forall{n} : \mathbb{N} \:\vert\: n\geqslant k : P(n) \Rightarrow P(n+1)) \Rightarrow (\forall{n} : \mathbb{N} \:\vert\: n\geqslant k : P(n))$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Fibonacci}\\
+\\
+$fib : \mathbb{N} \rightarrow \mathbb{N}$\\
+\\
+$\circled{A}$ $fib(0) = 0$\\
+$\circled{B}$ $fib(1) = 1$\\
+$\circled{C}$ $fib(n) = fib(n-1) + fib(n-2), n\geqslant 2$\\
 
 
 
