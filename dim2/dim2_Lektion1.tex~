@@ -791,6 +791,43 @@ $fib : \mathbb{N} \rightarrow \mathbb{N}$\\
 $\circled{A}$ $fib(0) = 0$\\
 $\circled{B}$ $fib(1) = 1$\\
 $\circled{C}$ $fib(n) = fib(n-1) + fib(n-2), n\geqslant 2$\\
+\\
+\\
+\uline{Satz} Fuer alle $n : \mathbb{N}$ gilt: \\
+\\
+$P(n): (\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n : fib(i)) = f(n+2) -1$\\
+\\
+\uline{Beweis}\\
+\\
+1) Induktionsanfang: zu zeigen: $P(0)$, also\\
+\\
+$(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant 0 : fib(i)) = f(0+2) -1$\\
+\\
+$(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant 0 : fib(i))$\\
+\\
+\tab $<$ empty range, neutral + $>$\\
+\\
+$=0$\\
+\\
+\\
+$fib(0+2) -1$\\
+\\
+\tab $<$ arith $>$\\
+\\
+$= fib(2) -1$\\
+\\
+\tab $<$ $\circled{C}$ mit $n=2$ $>$\\
+\\
+$= fib(0) + fib(1) -1$\\
+\\
+\tab $<$ $\circled{A}, \circled{B}$ $>$ \\
+\\
+$= 0 +1 -1$\\
+\\
+\tab $<$ arith $>$ \\
+\\
+$ =0$\\
+\\
 
 
 
