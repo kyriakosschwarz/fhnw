@@ -828,8 +828,30 @@ $= 0 +1 -1$\\
 \\
 $ =0$\\
 \\
-
-
+\\
+2) Induktionsschritt: \\
+\\
+Sei $n$ eine \uline{beliebige} natuerliche Zahl\\
+\\
+\uline{Annahme:} $(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n : fib(i)) = f(n+2) -1$\\
+\\
+\uline{zu zeigen:} $(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n+1: fib(i)) = f(n+3) -1$\\
+\\
+$(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n +1  : fib(i))$\\
+\\
+\tab $<$ range split (split-off term) $>$ \\
+\\
+$= (\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n : fib(i)) + fib(n+1)$\\
+\\
+\tab $<$ Annahme $>$ \\
+\\
+$= fib(n+2) -1 + fib(n+1)$\\
+\\
+\tab $<$ arith $>$\\
+\\
+$= (fib(n+2) + fib(n+1)) -1$\\
+\\
+\tab $<$ $\circled{C}$, mit $n+3 \g$
 
 
 
