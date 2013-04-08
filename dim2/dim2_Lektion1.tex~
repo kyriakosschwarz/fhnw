@@ -839,6 +839,7 @@ Sei $n$ eine \uline{beliebige} natuerliche Zahl\\
 \\
 \uline{zu zeigen:} $(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n+1: fib(i)) = fib(n+3) -1$\\
 \\
+\\
 $(\sum{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n +1  : fib(i))$\\
 \\
 \tab $<$ range split (split-off term) $>$ \\
