@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.31)  10 APR 2013 14:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.31)  10 APR 2013 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2468,7 +2468,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 647--761
 
  []
 
-[10] [11]
+[10] [11] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
 Underfull \hbox (badness 10000) in paragraph at lines 766--921
 
  []
@@ -2930,13 +2932,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 944--948
 
 [16] (./dim2_Lektion1.aux) ) 
 Here is how much of TeX's memory you used:
- 14089 strings out of 495059
- 242232 string characters out of 3182029
- 301555 words of memory out of 3000000
- 16961 multiletter control sequences out of 15000+200000
+ 14193 strings out of 495059
+ 243529 string characters out of 3182029
+ 323970 words of memory out of 3000000
+ 17061 multiletter control sequences out of 15000+200000
  12297 words of font info for 48 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,14n,55p,455b,1199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,14n,55p,455b,1328s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/kyri/.texmf-var/fonts/pk/ljfour/jknappen/ec
 /tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
@@ -2955,7 +2957,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on dim2_Lektion1.pdf (18 pages, 202359 bytes).
+Output written on dim2_Lektion1.pdf (18 pages, 202393 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream

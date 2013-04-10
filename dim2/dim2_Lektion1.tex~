@@ -918,7 +918,7 @@ $pow2(n)\begin{cases}
     2^0 = 1 \\
     2^n = 2 * 2^{n-1}$, fuer $n>0\\
   \end{cases}$\\
-\lstinputlisting{pow1pow2.java}
+\lstinputlisting[language=Java background=grey]{pow1pow2.java}
 
 \uline{Satz:} Fuer alle $n: \mathbb{N}$ gilt: $pow1(n) = pow2(n)$\\
 \\
@@ -943,7 +943,7 @@ $p \Rightarrow p\vee q$\\
 
 \uline{Teilbarkeit}\\
 \\
-$\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$ , $c,b : \mathbb{Z}$\\
+$\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$, $c,b : \mathbb{Z}$\\
 \\
 
 
