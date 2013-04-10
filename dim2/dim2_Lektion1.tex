@@ -3,6 +3,11 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
@@ -869,8 +874,82 @@ Fuer alle $n:\mathbb{N}$ mit $n\geqslant3$ gilt:\\
 \\
 $2n+1 < 2^n$\\
 \\
+\uline{Beweis}\\
+\\
+1) \uline{IA}\\
+\\
+$2*3 + 1 < 2^3 \equiv 7<8$ \checkmark \\
+\\
+2) \uline{IS}\\
+\\
+Sei $n$ eine \uline{beliebige} natuerliche Zahl mit $n\geqslant 3$\\
+\uline{Annahme} Es gelte: $2n+1 < 2^n$\\
+\uline{zu zeigen:} Es gilt: $2(n+1)+1 < 2^(n+1)$\\
+\\
+\uline{Beweis}\\
+\\
+$2(n+1) + 1$\\
+\\
+\tab $<$ arith $>$ \\
+\\
+$= (2n +1) +2 $\\
+\\
+\tab $<$ Annahme $>$ \\
+\\
+$\Rightarrow (2n+1) + 2 < 2^n +2$\\
+\\
+$\leqslant$\\
+\\
+$2^n + 2^n $\\
+\\
+\tab $<$ arith $>$ \\
+\\
+$= 2^n +1$ \checkmark \\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$2*2* ... *2 = 2^n$\\
+($n$ mal)\\
+\\
+$pow1(n) = (\prod{i} : \mathbb{N} \:\vert\: 1\leqslant i\leqslant n : 2)$\\
+\\
+$pow2(n)\begin{cases}
+    2^0 = 1 \\
+    2^n = 2 * 2^{n-1}$, fuer $n>0\\
+  \end{cases}$\\
+\lstinputlisting{pow1pow2.java}
+
+\uline{Satz:} Fuer alle $n: \mathbb{N}$ gilt: $pow1(n) = pow2(n)$\\
+\\
+\uline{Beweis} Aufgabe!\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$x<y \Rightarrow x\leqslant y$\\
+\\
+$x\leqslant y \Rightarrow x<y \vee x=y$\\
+\\
+$p \Rightarrow p\vee q$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\section{Siebte Woche}
+
+\subsection{Zahlentheorie}
+
+\uline{Teilbarkeit}\\
+\\
+$\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$, $c,b : \mathbb{Z}$\\
+\\
 
 
+
+
+ 
 
 
 

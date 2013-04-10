@@ -14,3 +14,5 @@
 \contentsline {subsection}{\numberline {5.2}Mathematische Induktion}{10}
 \contentsline {section}{\numberline {6}Sechste Woche}{12}
 \contentsline {subsection}{\numberline {6.1}Vollstaendige Induktion}{12}
+\contentsline {section}{\numberline {7}Siebte Woche}{16}
+\contentsline {subsection}{\numberline {7.1}Zahlentheorie}{16}
