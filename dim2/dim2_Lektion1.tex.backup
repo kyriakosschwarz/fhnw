@@ -918,7 +918,7 @@ $pow2(n)\begin{cases}
     2^0 = 1 \\
     2^n = 2 * 2^{n-1}$, fuer $n>0\\
   \end{cases}$\\
-\lstinputlisting{pow1pow2.java}
+\lstinputlisting[language=Java]{pow1pow2.java}
 
 \uline{Satz:} Fuer alle $n: \mathbb{N}$ gilt: $pow1(n) = pow2(n)$\\
 \\
@@ -933,11 +933,35 @@ $x\leqslant y \Rightarrow x<y \vee x=y$\\
 \\
 $p \Rightarrow p\vee q$\\
 \\
-
-
-
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 \section{Siebte Woche}
+
+\subsection{Zahlentheorie}
+
+\uline{Teilbarkeit}\\
+\\
+$\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$, $c,b : \mathbb{Z}$\\
+\\
+$c\backslash b \equiv (\exists{k} : \mathbb{Z} \:\vert : b = k * c)$\\
+\\
+$c\backslash b$ : "c teilt b"\\
+\tab "b ist teilbar durch c"\\
+\tab "c ist Teiler von b"\\
+\tab "b ist Vielfaches von c"\\
+\\
+\\
+\uline{Beispiel:}\\
+\\
+$7\backslash 13 = false$\\
+$(-7)\backslash 14 = true$\\
+nicht einheitlich in Literatur $\begin{cases}
+    0\backslash 14 = false \\
+    0\backslash 0 = true $ (es existiert kein $k$)$\\
+  \end{cases}$\\
+\\
 
 
 
