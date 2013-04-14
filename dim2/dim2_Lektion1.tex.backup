@@ -962,7 +962,27 @@ nicht einheitlich in Literatur $\begin{cases}
     0\backslash 0 = true $ (es existiert kein $k$)$\\
   \end{cases}$\\
 \\
-
+\\
+\uline{Satz} $b,c,d : \mathbb{Z}$\\
+\\
+(1) $c\backslash c$ (Reflektivitaet)\\
+(2) $c\backslash 0$\\
+(3) $1\backslash b$\\
+(4) $c\backslash 1 \Rightarrow c=1 \vee c=-1$\\
+(5) $d\backslash c \wedge c\backslash b \Rightarrow d\backslash b$ (Transitivitaet)\\
+(6) $b\backslash c \wedge c\backslash b \Rightarrow b=c \vee b =-c$\\
+\tab auf $\mathbb{Z}$ also nicht antisymmetrisiert, auf $\mathbb{N}$ aber schon\\
+(7) $b\backslash c \Rightarrow b\backslash (c*d)$\\
+(8) $b\backslash c \Rightarrow (b*d)\backslash (c*d)$\\
+(9) $1<b \wedge b\backslash c \Rightarrow \neg (b\backslash(c+1))$\\
+\\
+(1) und (5) und (6) heisst: $\backslash$-Relation ist eine partielle Ordnung auf $\mathbb{N}$ (aber nicht auf $\mathbb{Z}$)\\
+\\
+\uline{Beweis:}\\
+\\
+(1) zu zeigen: es gibt $k : \mathbb{Z}$ mit $c = k*c$\\
+\tab Waehle $k=1 : \mathbb{Z}$\\
+(2)
 
 
 
