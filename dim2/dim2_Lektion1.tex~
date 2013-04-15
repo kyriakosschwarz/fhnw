@@ -57,7 +57,11 @@
 
 %Mine(new)
 \newcommand{\tab}{\hspace*{2em}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
 
 %Metadata
 %\fancyfoot[C]{If you use this documentation for a exam, you should offer a beer to the authors!}
@@ -884,7 +888,7 @@ $2*3 + 1 < 2^3 \equiv 7<8$ \checkmark \\
 \\
 Sei $n$ eine \uline{beliebige} natuerliche Zahl mit $n\geqslant 3$\\
 \uline{Annahme} Es gelte: $2n+1 < 2^n$\\
-\uline{zu zeigen:} Es gilt: $2(n+1)+1 < 2^(n+1)$\\
+\uline{zu zeigen:} Es gilt: $2(n+1)+1 < 2^{(n+1)}$\\
 \\
 \uline{Beweis}\\
 \\
@@ -933,6 +937,9 @@ $x\leqslant y \Rightarrow x<y \vee x=y$\\
 \\
 $p \Rightarrow p\vee q$\\
 \\
+$x\leqslant y \nRightarrow x<y$\\
+\\
+$15\leqslant 15 \nRightarrow 15<15$\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
@@ -948,9 +955,9 @@ $\mathbb{Z} = \{...,-2,-1,0,1,2,...\}$, $c,b : \mathbb{Z}$\\
 $c\backslash b \equiv (\exists{k} : \mathbb{Z} \:\vert : b = k * c)$\\
 \\
 $c\backslash b$ : "c teilt b"\\
-\tab "b ist teilbar durch c"\\
-\tab "c ist Teiler von b"\\
-\tab "b ist Vielfaches von c"\\
+\tab\: "b ist teilbar durch c"\\
+\tab\: "c ist Teiler von b"\\
+\tab\: "b ist Vielfaches von c"\\
 \\
 \\
 \uline{Beispiel:}\\
@@ -958,8 +965,8 @@ $c\backslash b$ : "c teilt b"\\
 $7\backslash 13 = false$\\
 $(-7)\backslash 14 = true$\\
 nicht einheitlich in Literatur $\begin{cases}
-    0\backslash 14 = false \\
-    0\backslash 0 = true $ (es existiert kein $k$)$\\
+    0\backslash 14 = false $ (es existiert kein $k) \\
+    0\backslash 0 = true  \\
   \end{cases}$\\
 \\
 \\
@@ -982,25 +989,28 @@ nicht einheitlich in Literatur $\begin{cases}
 \\
 (1) zu zeigen: es gibt $k : \mathbb{Z}$ mit $c = k*c$\\
 \tab Waehle $k=1 : \mathbb{Z}$\\
-(2) $0 = k*c, k=0 : \mathbb{Z}$\\
-(3) $b = k*1, k=b : \mathbb{Z}$\\
+(2) $0 = k*c$ , $ k=0 : \mathbb{Z}$\\
+(3) $b = k*1$ , $ k=b : \mathbb{Z}$\\
 (4) $1 = k*c = 1*1 = (-1)*(-1) \Rightarrow c=1 \vee c=-1$\\
 (5)\\ 
-$d\backslash c$, also gibt es $k_1 : \mathbb{Z}$ mit $c = k1 * d$\\
-$c\backslash b$, also gibt es $k_2 : \mathbb{Z}$ mit $b = k2 * c$\\
+$d\backslash c$, also gibt es $k_1 : \mathbb{Z}$ mit $c = k_1 * d$\\
+$c\backslash b$, also gibt es $k_2 : \mathbb{Z}$ mit $b = k_2 * c$\\
 aber $b=k_2 *c = k_2*(k_1*d) = (k_2 * k_1) *d$\\
-also gibt es $k=k_1*k_2: \mathbb{Z}$ mit$ b=k*d$, also $d\backslash b$\\
+also gibt es $k=k_1*k_2: \mathbb{Z}$ mit $b=k*d$, also $d\backslash b$\\
 (6)\\
 $b\backslash c$, also gibt es $k_1 : \mathbb{Z}$ mit $c = k1 * b$\\
 $c\backslash b$, also gibt es $k_2 : \mathbb{Z}$ mit $b = k2 * c$\\
 also $b = k_2 * c = k_2*(k_1*b) = (k_2*k_1)*b$\\
 also $b- (k_2*k_1)*b =0$\\
-also $b- (1- k_2*k_1) =0$\\
+also $b* (1- k_2*k_1) =0$\\
 also $b=0 \vee 1- k_2*k_1 =0$\\
 also $b=0 \vee k_2 * k_1 = 1$\\
 also $b=0 \vee k_2 = k_1 = 1 \vee k_2 = k_1 = -1$\\
 also $b=0 \vee c = b \vee c =-b $\\
 mit $b=0$ ist $c =b$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
 \\
 
 
