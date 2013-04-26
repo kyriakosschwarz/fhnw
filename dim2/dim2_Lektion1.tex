@@ -1012,9 +1012,215 @@ mit $b=0$ ist $c =b$\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
+\uline{Satz} Seien $a,b,c : \mathbb{Z}$ \\
+\\
+Dann \: $a\backslash b \wedge a\backslash c \Rightarrow a\backslash (b+c)$\\
+\\
+$a\backslash b \Rightarrow b = k_1 * a$\\
+\\
+$a\backslash c \Rightarrow c = k_2 * a$\\
+\\
+$a\backslash (b+c) \Rightarrow a\backslash (k_1 * a +  k_2 * a) \Rightarrow a\backslash a*(k_1+k_2)$ \checkmark    (Satz (7)) \\
+\\
+\\
+\uline{Beweis}\\
+\\
+\uline{Annahme 1:} $a\backslash b$, also nach Definition existiert $k_1 : \mathbb{Z}$ mit $b = k_1 *a$\\
+\\
+\uline{Annahme 2:} $a\backslash c$, also nach Definition existiert $k_2 : \mathbb{Z}$ mit $c = k_2 *a$\\
+\\
+\uline{zu zeigen:} Es existiert $k_3 : \mathbb{Z}$ mit $b+c = k_3 * a$\\
+\\
+\\
+$b+c$\\
+\\
+\tab $<$ Annahme 1 und 2 $>$\\
+\\
+$= k_1 * a + k_2 * a$\\
+\\
+\tab $<$ arith $>$\\
+\\
+$= (k_1 + k_2) *a$\\
+\\
+\tab $<$ mit $k_3 = k_1 + k_2 : \mathbb{Z}$ $>$\\
+\\
+$= k_3 * a$\\
+\\
+$\qed$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
+\section{Achte Woche}
 
+\subsection{Euklidische Division}
 
+\uline{Satz} (Euklidische Division auf $\mathbb{N}$)\\
+\\
+Seien $a,b : \mathbb{N} $, $ b\neq 0$.\\
+\\
+Dann gibt es eindeutige $q, r : \mathbb{N}$ mit\\
+\\
+$a = b*q + r \wedge 0\leqslant r < b$\\
+\\
+$\qed$\\
+\\
+\\
+\uline{Satz} (Euklidische Division auf $\mathbb{Z}$)\\
+\\
+Seien $a,b : \mathbb{Z} $, $ b\neq 0$.\\
+\\
+Dann gibt es eindeutige $q : \mathbb{Z}$, $ r : \mathbb{N}$ mit\\
+\\
+$a = b*q + r \wedge 0\leqslant r < |b|$\\
+\\
+$\qed$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$a,b : \mathbb{N}$, $b\neq 0$\\
+\\
+$a = 17$, $b = 5$\\
+\\
+$17 = 5*0 + 17 \wedge 0\leqslant 17$\\
+\\
+$17 = 5*1 + 12 \wedge 0\leqslant 12$\\
+\\
+$17 = 5*2 + 7 \wedge 0\leqslant 7$\\
+\\
+$17 = 5*3 + 2 \wedge 0\leqslant 2$\\
+\\
+$a = b * q + r \wedge 0\leqslant r$ (Invariante)\\
+\\
+Stop bei $r<b$\\
+\\
+$q, r$ seien Variablen einer imperativer Programmiersprache (keine Mathematische Variablen)
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$\{ a\geqslant 0 \wedge b> 0 \}$\\
+\\
+VC3 $\Rightarrow$\\
+\\
+$\{ a = b * 0 + a \wedge 0\leqslant a \} $\\
+\\
+$q, r := 0, a;$\\
+\\
+$\{ a = b * q + r \wedge 0\leqslant r \} $\\
+\\
+\uline{while} $r\geqslant b$ \uline{do}\\
+\\
+$\{ a = b * q + r \wedge 0\leqslant r \wedge r\geqslant b \} $\\
+\\
+VC1 $\Rightarrow$\\
+\\
+$\{ a = b * (q+1) + (r-b) \wedge 0\leqslant r-b \} $ (Precondition)\\
+\\
+\tab $q,r := q+1, r-b$\\
+\\
+$\{ a = b * q + r \wedge 0\leqslant r \} $\\
+\\
+\uline{endwhile}\\
+\\
+$\{ a = b * q + r \wedge 0\leqslant r \wedge \neg r \geqslant b \} $\\
+\\
+VC2 $\Rightarrow$\\
+\\
+$\{ a = b * q + r \wedge 0\leqslant r < b\} $\\
+\\
+\\
+VC: Verification Condition\\
+\\
+\\
+VC3: $a = b* 0 + a$  $(true)$\\
+\\
+\tab $a\geqslant 0 \wedge b > 0 \Rightarrow true \wedge 0 \leqslant a$\\
+\\
+\\
+VC2: $\neg r \geqslant b \equiv  r< b$\\
+\\
+\\
+VC1: $a= b(q+1) + (r-b) $\\
+$\Leftarrow$\\
+$a = b*q + b + r -b$\\
+$\Leftarrow$\\
+$a = b*q +r$\\
+\\
+(von unten nach oben)\\
+\\
+\\
+Warum gilt $0\leqslant r-b $?\\
+\\
+Weil $r\geqslant b$!\\
+\\
+$r\geqslant b \Rightarrow$ $ r-b \geqslant 0 \Rightarrow$ $ 0\leqslant r-b$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$\{ x+1 > 5 \}$ (Vorbedingung)\\
+$x := x+1 $\\
+$\{ x > 5 \}$ (Nachbedingung)\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\subsection{Fundamentaler Schleifen-Satz}
+
+\uline{Satz} (Fundamentaler Schleifen-Satz)\\
+\\
+Seien $B$ und $I$ boolesche Ausdruecke und $C$ ein Kommando.\\
+\\
+Es gelte $\{ I \wedge B \}$ $C$ $\{ I \}$, d.h. $I$ ist eine Invariante der Schleife \uline{while} $B$ \uline{do} $C$ \uline{end}.\\
+\\
+Die Ausfuehrung der Schleife beginne im Zustand der $I$ erfuellt. Dann gilt $I$ nach jedem Schleifendurchlauf.\\
+\\
+$\qed$\\
+\\
+\\
+\uline{Beweis}\\
+\\
+Durch Induktion. Wir zeigen, dass "Invariante ist nach $n$ Schleifendurchlaeufe erfuellt" fuer alle $n \in M$.\\
+Dabei ist $M = N$, falls $\infty$-Schleife, und $M = \{ 0 ... N \} $ mit $N : \mathbb{N}$ Anzahl der Schleifendurchlaeufe (SDL).\\
+\\
+\uline{IA} $I$ ist nach $0$ SDL erfuellt, nach Voraussetzung\\
+\\
+Sei $M=N$ (Fall 2: Sei $M = \{ 0 ... N \} $)\\
+\\
+\uline{IS} Sei $n$ eine \uline{beliebige} natuerliche Zahl. (Fall 2: $n \leqslant N-1$)\\
+\\
+Annahme: Es gelte: $I$ ist nach $n$ SDL erfuellt.\\
+zu zeigen: Es gilt: $I$ ist nach $n+1$ SDL erfuellt.\\
+\\
+\uline{Beweis}\\
+\\
+$I$ ist nach $n$ SDL erfuellt. Weiterer SDL bedeutet, dass Schleifenbedingung $B$ gilt.\\
+$I \wedge B$ gilt also, also nach Ausfuehrung von $C$ wieder $I$, wegen $\{ I \wedge B \}$ $C$ $\{ I \} $, also\\
+$I$ nach $n+1$ SDL erfuellt.\\
+\\
+$\qed$\\
+\\
+\\
+\uline{Satz} Falls Ausfuehrung terminiert, gilt am Ende $I \wedge \neg B$\\
+\\
+\uline{Beweis}\\
+\\
+Nach obigem Satz, gilt $I$ am Ende. Die Schleife terminiert, gilt auch $\neg B$.\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$\{ I \wedge B \}$ $C$ $\{ I \}$\\
+\\
+$\{I \}$ \uline{while} $\{ B \} $ \uline{do} $C$ \uline{end} $\{ I \wedge \neg B \} $\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 
 

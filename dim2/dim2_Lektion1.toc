@@ -16,3 +16,6 @@
 \contentsline {subsection}{\numberline {6.1}Vollstaendige Induktion}{12}
 \contentsline {section}{\numberline {7}Siebte Woche}{16}
 \contentsline {subsection}{\numberline {7.1}Zahlentheorie}{16}
+\contentsline {section}{\numberline {8}Achte Woche}{18}
+\contentsline {subsection}{\numberline {8.1}Euklidische Division}{18}
+\contentsline {subsection}{\numberline {8.2}Fundamentaler Schleifen-Satz}{20}
