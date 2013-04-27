@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.31)  26 APR 2013 15:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.31)  27 APR 2013 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3537,7 +3537,237 @@ Underfull \hbox (badness 10000) in paragraph at lines 1174--1224
 
  []
 
-[20] [21] (./dim2_Lektion1.aux) ) 
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1315
+
+ []
+
+[21] [22] (./dim2_Lektion1.aux) ) 
 Here is how much of TeX's memory you used:
  14235 strings out of 495059
  244160 string characters out of 3182029
@@ -3560,14 +3790,14 @@ nts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
-m7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on dim2_Lektion1.pdf (23 pages, 212786 bytes).
+cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on dim2_Lektion1.pdf (24 pages, 224358 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 162 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

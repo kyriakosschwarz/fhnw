@@ -19,3 +19,5 @@
 \contentsline {section}{\numberline {8}Achte Woche}{18}
 \contentsline {subsection}{\numberline {8.1}Euklidische Division}{18}
 \contentsline {subsection}{\numberline {8.2}Fundamentaler Schleifen-Satz}{20}
+\contentsline {section}{\numberline {9}Neunte Woche}{21}
+\contentsline {subsection}{\numberline {9.1}Euklid auf $\mathbb {Z}$, $\mathbb {N}$}{21}

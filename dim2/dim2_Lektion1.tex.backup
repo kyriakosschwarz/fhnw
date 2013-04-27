@@ -1020,7 +1020,7 @@ $a\backslash b \Rightarrow b = k_1 * a$\\
 \\
 $a\backslash c \Rightarrow c = k_2 * a$\\
 \\
-$a\backslash (b+c) \Rightarrow a\backslash (k_1 * a +  k_2 * a) \Rightarrow a\backslash a*(k_1+k_2)$\\
+$a\backslash (b+c) \Rightarrow a\backslash (k_1 * a +  k_2 * a) \Rightarrow a\backslash a*(k_1+k_2)$ \checkmark    (Satz (7)) \\
 \\
 \\
 \uline{Beweis}\\
@@ -1060,7 +1060,9 @@ $\qed$\\
 \\
 Seien $a,b : \mathbb{N} $, $ b\neq 0$.\\
 \\
-Dann gibt es eindeutige $q, r : \mathbb{N}$ mit $a = b*q + r \wedge 0\leqslant r < b$\\
+Dann gibt es eindeutige $q, r : \mathbb{N}$ mit\\
+\\
+$a = b*q + r \wedge 0\leqslant r < b$\\
 \\
 $\qed$\\
 \\
@@ -1069,7 +1071,9 @@ $\qed$\\
 \\
 Seien $a,b : \mathbb{Z} $, $ b\neq 0$.\\
 \\
-Dann gibt es eindeutige $q : \mathbb{Z}$, $ r : \mathbb{N}$ mit $a = b*q + r \wedge 0\leqslant r < |b|$\\
+Dann gibt es eindeutige $q : \mathbb{Z}$, $ r : \mathbb{N}$ mit\\
+\\
+$a = b*q + r \wedge 0\leqslant r < |b|$\\
 \\
 $\qed$\\
 \\
@@ -1097,7 +1101,7 @@ $q, r$ seien Variablen einer imperativer Programmiersprache (keine Mathematische
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
-$\{ a\geqslant 0 \wedge b> 0$\\
+$\{ a\geqslant 0 \wedge b> 0 \}$\\
 \\
 VC3 $\Rightarrow$\\
 \\
@@ -1130,11 +1134,14 @@ $\{ a = b * q + r \wedge 0\leqslant r < b\} $\\
 \\
 VC: Verification Condition\\
 \\
-VC3: $a = b* 0 + a = true$\\
+\\
+VC3: $a = b* 0 + a$  $(true)$\\
 \\
 \tab $a\geqslant 0 \wedge b > 0 \Rightarrow true \wedge 0 \leqslant a$\\
 \\
+\\
 VC2: $\neg r \geqslant b \equiv  r< b$\\
+\\
 \\
 VC1: $a= b(q+1) + (r-b) $\\
 $\Leftarrow$\\
@@ -1143,6 +1150,7 @@ $\Leftarrow$\\
 $a = b*q +r$\\
 \\
 (von unten nach oben)\\
+\\
 \\
 Warum gilt $0\leqslant r-b $?\\
 \\
@@ -1160,6 +1168,9 @@ $\{ x > 5 \}$ (Nachbedingung)\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
+
+\subsection{Fundamentaler Schleifen-Satz}
+
 \uline{Satz} (Fundamentaler Schleifen-Satz)\\
 \\
 Seien $B$ und $I$ boolesche Ausdruecke und $C$ ein Kommando.\\
@@ -1211,10 +1222,88 @@ $\{I \}$ \uline{while} $\{ B \} $ \uline{do} $C$ \uline{end} $\{ I \wedge \neg B
 \rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Neunte Woche}
 
+\subsection{Euklid auf $\mathbb{Z}$, $\mathbb{N}$}
 
+\uline{Satz} (Euklid auf $\mathbb{Z}$)\\
+\\
+$a, b : \mathbb{Z}$, $b \neq 0$. Dann gibt es eindeutige $q: \mathbb{Z}$, $r : \mathbb{N}$ mit\\
+\\
+$a = b* q + r \wedge 0 \leqslant r < |b|$\\
+\\
+$\qed$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Truncated Division}\\
+\\
+$a = b* q + r \wedge \begin{cases}
+    0 \leqslant r < |b|,\:\:\:   $ if $a\geqslant 0  \\
+     -|b| < r \leqslant 0 $, if $a\leqslant 0 \\
+  \end{cases}$\\
+\\
+$r: \mathbb{Z}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Satz} (Euklid auf $\mathbb{N}$)\\
+\\
+$a, b : \mathbb{N}$, $b \neq 0$. Dann gibt es eindeutige $q: \mathbb{N}$, $r : \mathbb{N}$ mit\\
+\\
+$a = b* q + r \wedge 0 \leqslant r < b$\\
+\\
+$\qed$\\
+\\
+\\
+\uline{Beweis} fuer Euklid auf $\mathbb{Z}$\\
+\\
+\uline{4 Faelle}\\
+\\
+\\
+\uline{1. Fall} $a\geqslant 0$, $b > 0$ Trivial\\
+\\
+\\
+\uline{2. Fall} $a\geqslant 0$, $b < 0$ Euklid $\mathbb{N}$ anwenden auf $(a, -b)$. Liefert\\
+\\
+$a = (-b)*q + r \wedge 0 \leqslant r < -b$\\
+\\
+Waehle $(q', r') = (-q, r)$  $-b = |b|$\\
+\\
+$a = b*(-q) + r \wedge 0 \leqslant r < |b|$\\
+\\
+$a = b*q' + r' \wedge 0 \leqslant r' < |b|$\\
+\\
+\\
+\uline{3. Fall} $a< 0 \wedge b > 0 $ Euklid $\mathbb{N}$ anwenden auf $(-a,b)$ Liefert\\
+\\
+$-a = b*q + r \wedge 0 \leqslant r < b$\\
+\\
+\\
+\uline{Sei $r=0$} Waehle $(q', r') = (-q, 0)$  $b = |b|$\\
+\\
+$a = b*(-q) - r \wedge 0 \leqslant r < |b|$\\
+\\
+$a = b*q' + r \wedge 0 \leqslant r < |b|$\\
+\\
+\\
+\uline{Sei $1\leqslant r \leqslant b-1$} Waehle $(q', r') = (-(q+1), b-r)$\\
+\\
+$-a = b*q + r$\\
+\\
+$a = b*(-q) -r$\\
+\\
+$= b*(-q) -b+b -r$\\
+\\
+$= b*(-q-1) +(b-r)$\\
+\\
+$= b*(-(q+1)) +(b-r)$\\
+\\
+$= b*q' + r'$\\
+\\
 
- 
 
 
 
