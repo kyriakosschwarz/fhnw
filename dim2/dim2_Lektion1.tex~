@@ -1274,7 +1274,7 @@ Euklid $\mathbb{N}$ anwenden auf $(a, -b)$. Liefert\\
 \\
 $a = (-b)*q + r \wedge 0 \leqslant r < -b$\\
 \\
-Waehle $(q', r') = (-q, r)$  $-b = |b|$\\
+Waehle $(q', r') = (-q, r)$ \tab $-b = |b|$\\
 \\
 $a = b*(-q) + r \wedge 0 \leqslant r < |b|$\\
 \\
@@ -1283,12 +1283,12 @@ $a = b*q' + r' \wedge 0 \leqslant r' < |b|$\\
 \\
 \uline{3. Fall} $a< 0 \wedge b > 0 $\\
 \\
-Euklid $\mathbb{N}$ anwenden auf $(-a,b)$ Liefert\\
+Euklid $\mathbb{N}$ anwenden auf $(-a,b)$ Liefert $q, r$ mit\\
 \\
 $-a = b*q + r \wedge 0 \leqslant r < b$\\
 \\
 \\
-\uline{Sei $r=0$} Waehle $(q', r') = (-q, 0)$  $b = |b|$\\
+\uline{Sei $r=0$} Waehle $(q', r') = (-q, 0)$ \tab  $b = |b|$\\
 \\
 $a = b*(-q) - r \wedge 0 \leqslant r < |b|$\\
 \\
@@ -1315,7 +1315,12 @@ $1\leqslant \underbrace{b-r}_\text{$r'$} \leqslant b-1 \begin{cases}
 				r \leqslant b-1 \rightarrow 1 \leqslant b-r\\
                               \end{cases}$\\
 \\
-\\                              
+\\         
+\uline{4. Fall} $a< 0$, $b<0$ (??)\\
+\\
+Aehnlich\\
+\\
+\\
 \rule{\textwidth}{0.4mm}\\
 \\                              
                               
