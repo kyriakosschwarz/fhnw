@@ -290,9 +290,9 @@ Beispiele:\\
 \\
 4) $(\vee \:i:\mathbb{N} \:\vert\: 0\leqslant i < 21 : b[i]=0) = (b[0] == 0) \vee (b[1] == 0) \vee ...  $\\
 \\
-5) $(\sum k : \mathbb{N} \:\vert\: k^2 = 4 : k^2) = 2$\\
+5) $(\sum k : \mathbb{N} \:\vert\: k^2 = 4 : k^2) = 2^2 = 4$\\
 \\
-6) $(\sum k : \mathbb{Z} \:\vert\: k^2 = 4 : k^2) = 2 + (-2) = 0$\\
+6) $(\sum k : \mathbb{Z} \:\vert\: k^2 = 4 : k^2) = 2^2 + (-2)^2 = 8$\\
 \\
 \\
 \\
@@ -333,7 +333,7 @@ $n = 0 \rightarrow 0$\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
-E3: $(\sum{i} \:\circled{1} : \mathbb{Z} \:\vert\: 0\leqslant i \:\circled{2} < n : i^2 \:\circled{3} ) + 1 \:\circled{4}$\\
+E3: $(\sum{i} \:\circled{1} : \mathbb{Z} \:\vert\: 0\leqslant i \:\circled{2} < n : i^2 \:\circled{3} ) + i \:\circled{4}$\\
 \\
 $(\leftarrow \rightarrow) :$ Gueltigkeitsbereich von $i$ (scope)\\
 \\
@@ -346,7 +346,7 @@ $\circled{2}$ und $\circled{3}$ angewandte Auftreten (applied)\\
 $\circled{1}$ bindende, deklarierende Auftreten (binding)\\
 \\
 \\
-Eine Variable heisst \uline{frei} in einem Ausdruck E (expresion), falls sie in E frei vorkommt.\\
+Eine Variable heisst \uline{frei} in einem Ausdruck E (expression), falls sie in E frei vorkommt.\\
 \\
 \\
 $FV(E) =$ Menge der freie Variablen von E\\
