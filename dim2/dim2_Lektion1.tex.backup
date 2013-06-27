@@ -1656,6 +1656,46 @@ $gcd(x,y) = gcd(x,x) = x = gcd(a,b)\: \checkmark$\\
 
 \section{Zwoelfte Woche}
 
+\subsection{GCD langsam-schnell}
+
+$x \: mod \: y =0 \rightarrow$ Stop bei schnellem Algorithmus. $gcd(a,b) = gcd(0,y) = y$,\tab $x,y\geqslant0$\\
+\\
+$x=y \rightarrow$ Stop bei langsamen Algorithmus. $gcd(a,b) = gcd(x,x) = x$, \tab$x,y>0$\\
+\\
+$gcd(a,b) =^{\circled{*}} gcd(b, a\: mod\: b)$\\
+\\
+\\
+$a,b,k : \mathbb{Z}$\\
+\\
+$gcd(a,b) =^{\circled{1}} gcd(a-k*b, b)$\\
+\\
+Sei $b\neq0$\\
+\\
+$a = b* q + r \wedge 0 \leqslant r < |b|$,\tab $q = a\: div \:b$,\tab $r = a\: mod\: b$\\
+\\
+$a = b*(a\: div \:b) + (a\: mod\: b)$\\
+\\
+$a\: mod\: b =^{\circled{2}} a - b*(a\: div\: b)$\\
+\\
+\\
+$gcd(a,b)$\\
+\\
+\tab $<$ $\circled{1}$ $>$\\
+\\
+$= gcd(a-k*b,b)$\\
+\\
+\tab $<$ setze $k = a\: div\: b$ $>$\\
+\\
+$= gcd(a-(a\: div\: b)*b,b)$\\
+\\
+\tab $<$ $\circled{2}$ $>$\\
+\\
+$= gcd(a\: mod\: b, b) =^{<symm.>} gcd(b, a\: mod\: b)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
 \subsection{Euklid schnell}
 
 $\{a\geqslant 0 \wedge b\geqslant 0\}$\\
@@ -1769,6 +1809,84 @@ Post: $\{ x = gcd(a,b)\: \wedge $\\
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
+
+\section{Dreizehnte Woche}
+
+\subsection{GCD (Fortsetzung)}
+
+$a,b : \mathbb{Z}$ Dann gibt es $u,v :\mathbb{Z}$ mit\\
+\\
+\tab $u*a + v*b  = gcd(a,b)$\\
+\\
+\uline{Zeigen Sie}\\
+\\
+$c\backslash a\:\: \circled{1}\tab   \wedge c\backslash b \:\: \circled{2}\tab  \equiv c\backslash gcd(a,b) $\\
+\\
+1) "$\Leftarrow$"\\
+\\
+Sei $d = gcd(a,b)$\\
+\\
+$c\backslash d$\\
+\\
+$d$ ist \uline{$gcd$} von $a$ und $b$. Also ist $d$ \uline{$cd$} (common divisor) von $a$ und $b$. Also $d\backslash a\wedge d\backslash b$\\
+\\
+$c\backslash d\wedge d\backslash a$, also $c\backslash a$\\
+$c\backslash d\wedge d\backslash b$, also $c\backslash b$\\
+\\
+Transitivitaet $\backslash$\\
+\\
+2) "$\Rightarrow$"\\
+\\
+$c\backslash a\wedge c\backslash b$, also\\
+\\
+$\exists{k_1}:\mathbb{Z}$ mit $a=k_1*c$\\
+$\exists{k_2}:\mathbb{Z}$ mit $b=k_2*c$\\
+\\
+Es gibt $u,v : \mathbb{Z}$ mit\\
+\\
+\tab $u*a + v*b = gcd(a,b)$\\
+\\
+also\\
+\\
+\tab $u*(k_1*c) + v*(k_2*c) = gcd(a,b)$\\
+\\
+also\\
+\\
+\tab $\underbrace{(u*k_1 + v*k_2)}_\text{$\mathbb{Z}$}*c = gcd(a,b)$\\
+\\
+also\\
+\\
+\tab $c\backslash gcd(a,b)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\subsection{Restklassen}
+
+\uline{Def} (Menge der Reste modulo $n$)\\
+\\
+$\mathbb{Z}_n = \{ a:\mathbb{Z}\:\vert\: 0\leqslant a<n\}$\\
+\\
+\uline{Beispiel}\\
+\\
+$\mathbb{Z}_6 = \{0,1,2,3,4,5\}$\\
+\\
+\\
+\uline{Arithmetik}\\
+\\
+$+_n , *_n : \mathbb{Z}_n \times \mathbb{Z}_n \rightarrow \mathbb{Z}_n$\\
+\\
+$a +_n b = (a+b)mod\:n$\\
+$a *_n b = (a*b)mod\:n$\\
+
+
+
+
+
+
+
+
 
 
 %\subsection{This is a subsection}

@@ -27,6 +27,9 @@
 \contentsline {section}{\numberline {11}Elfte Woche}{27}
 \contentsline {subsection}{\numberline {11.1}Euklidischer Algorithmus}{27}
 \contentsline {section}{\numberline {12}Zwoelfte Woche}{28}
-\contentsline {subsection}{\numberline {12.1}gcd langsam-schnell}{28}
+\contentsline {subsection}{\numberline {12.1}GCD langsam-schnell}{28}
 \contentsline {subsection}{\numberline {12.2}Euklid schnell}{29}
 \contentsline {subsection}{\numberline {12.3}Erweiterter Euklid}{30}
+\contentsline {section}{\numberline {13}Dreizehnte Woche}{31}
+\contentsline {subsection}{\numberline {13.1}GCD (Fortsetzung)}{31}
+\contentsline {subsection}{\numberline {13.2}Restklassen}{32}
