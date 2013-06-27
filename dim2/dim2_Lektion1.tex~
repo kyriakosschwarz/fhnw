@@ -1654,9 +1654,68 @@ $gcd(x,y) = gcd(x,x) = x = gcd(a,b)\: \checkmark$\\
 \rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Zwoelfte Woche}
 
+\subsection{Euklid schnell}
 
+$\{a\geqslant 0 \wedge b\geqslant 0\}$\\
+\\
+$(x,y) := (a,b);$\\
+\\
+\uline{while} $y \neq 0$ \uline{do}\\
+\\
+\tab \uline{invariante} $gcd(a,b) = gcd(x,y) \wedge x\geqslant 0 \wedge y\geqslant 0$\\
+\\
+$(x,y) = (y, x\: mod\: y)$\\
+\\
+\uline{endwhile}\\
+\\
+$\{x = gcd(a,b)\}$\\
+\\
+$\rightarrow$ rueckwerts einsetzen\\
+\\
+\\
+Invar. Schleifenbedingung\\
+\\
+$\{ (gcd(a,b) = gcd(x,y))^{\circled{1}} \wedge (x\geqslant 0)^{\circled{2}} \wedge (y\geqslant 0)^{\circled{3}} \wedge (y\neq 0)^{\circled{4}}\}$\\
+\\
+VC\\
+$\Rightarrow$\\
+\\
+$\{ (gcd(a,b) = gcd(y,x\: mod\: y))^{\circled{A}} \wedge (y\geqslant 0)^{\circled{B}} \wedge (x\: mod\: y)^{\circled{C}} \}$ (PRE)\\
+\\
+$(x,y) = (y, x\: mod\: y)$\\
+\\
+$\{ (gcd(a,b) = gcd(x,y)) \wedge (x\geqslant 0) \wedge (y\geqslant 0) \}$ (POST=inv)\\
+\\
+\\
+Wir wissen: $\circled{1} \wedge \circled{2} \wedge\ \circled{3} \wedge \circled{4}$\\
+Zu zeigen: $\circled{A}$, $\circled{B}$, $\circled{C}$\\
+\\
+$\circled{A}$: $gcd(a,b) =^{\circled{1}} gcd(x,y) =^{\circled{*}} gcd(y, x\: mod\: y)\: \checkmark$\\
+\\
+$\circled{B}$: $\circled{3} \Rightarrow \circled{B}\: \checkmark$\\
+\\
+$\circled{C}$: 'mod' immer $\geqslant 0$, und $y \neq 0$ wegen $\circled{4}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
+\subsection{Erweiterter Euklid}
+
+\uline{Satz} Seien $a,b : \mathbb{Z}$ Dann gibt es Zahlen \\
+\\
+\tab $u,v: \mathbb{Z}$ mit\\
+\\
+\tab $u * a + v * b = gcd(a,b)$ (Bezout-Identitaet)\\
+\\
+\tab $\rightarrow$ \uline{nicht} eindeutig $\rightarrow$ unendlich\\
+\\
+$\qed$\\
+\\
+\\
+Wir konstruieren $u$ und $v$ fuer $a,b : \mathbb{N}$ durch Erweiterter Eu
 
 
 

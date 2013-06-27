@@ -1337,16 +1337,16 @@ $a = b * q + r \wedge 0 \leqslant r < |b|$\\
 \\
 \uline{Eindeutigkeit} Seien $a,b,q,r,q',r': \mathbb{Z}$ mit $b \neq 0$\\
 \\
-es gelte:\\
+Es gelte:\\
 \tab $a = b * q + r \wedge 0 \leqslant r < |b|$\\
-\tab $a = b * q' + r' \wedge 0 \leqslant r < |b|$\\
+\tab $a = b * q' + r' \wedge 0 \leqslant r' < |b|$\\
 \\
 Dann gilt $q=q'$ unr $r=r'$.\\
 \\
 \uline{Beweis:}\\
 \\
 $a = b * q + r$\\
-$a = b * q + r$\tab $-$\\
+$a = b * q' + r'$\tab $-$\\
 \rule{2cm}{0.2mm}\\
 $0=b(q-q') + (r-r')$\\
 $\rightarrow |b| |q-q'| = |r-r'|$\\
@@ -1356,7 +1356,7 @@ $0 \geqslant -r' < -|b|$\\
 \rule{2cm}{0.2mm}\\
 \\
 $-|b| < -r' \leqslant 0$\\
-$0 \leqslant r' < |b|$\tab $+$\\
+$0 \leqslant r < |b|$\tab $+$\\
 \rule{2cm}{0.2mm}\\
 $-|b| < r-r' < |b|$ \tab $\rightarrow$ echt kleiner $\circled{$<$}$ !\\
 \\
@@ -1437,7 +1437,7 @@ Def (GCD) Seien $a,b : \mathbb{Z}$ mit $a\neq 0 \vee b\neq 0$\\
 \\
 $gcd(a,b) = a\: gcd\: b = max(D_{a,b}) = $\\
 \\
-$(max d: \mathbb{Z} \:\vert\: d\backslash a \wedge d\backslash b\ : d)$\\
+$(max\: d: \mathbb{Z} \:\vert\: d\backslash a \wedge d\backslash b\ : d)$\\
 \\
 $gcd(0,0) = 0 \leftarrow$ (selber so definiert - nicht einheitlich)\\
 \\
@@ -1470,11 +1470,11 @@ $gcd(a,0) = |a|$\\
 $gcd(0,b) = |b|$\tab $0$ ist neutrales Element von $gcd$\\
 $gcd(a,a) = |a|$\\
 $a\: gcd \: b = b\: gcd \: a$\tab Symmetrie\\
-$gcd(a,1) = |a|$\tab $1$ ist Null von $gcd$ (Destruktor)\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
+$gcd(a,1) = 1$\tab $1$ ist Null von $gcd$ (Destruktor)\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
 $gcd(a,b) = gcd(a\: mod\: b,b)$\\
 $a\backslash b \Rightarrow gcd(a,b) = a$\\
 $gcd(0,0) = 0$\\
-$gcd(a,b) = gcd(|a|,|b|), k:\mathbb{Z}$\\
+$gcd(a,b) = gcd(|a|,|b|)$, $k:\mathbb{Z}$\\
 \\
 \\
 $gcd(a,b) = gcd(a+k*b,b)$ \tab $k:\mathbb{Z}$\\
@@ -1510,7 +1510,7 @@ $\Rightarrow a -k*b = d(k_1 - k_2*k) \wedge b = k_2 *d$\\
 \\
 \tab $<$ Def. $\backslash$ mit $k_1 - k*k_2: \mathbb{Z}$ $>$\\
 \\
-\tab $\Rightarrow d \backslash (a-k*b) \wedge d\backslash b$\\
+$\Rightarrow d \backslash (a-k*b) \wedge d\backslash b$\\
 \\
 \tab $<$ Def. $D_{a-k*b,b}$ $>$\\
 \\
@@ -1584,13 +1584,13 @@ $(x,y) := (a,b);$\\
 \\
 \uline{while} $x\neq y$ \uline{do}\\
 \\
-\uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
+\tab \uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
 \\
 \uline{if} $x>y$ \uline{then}\\
 \\
 \tab $x:= x-y$\\
 \\
-\uline{else} // $x<y$ (assert $x<y$)\\
+\uline{else} \tab// $x<y$ (assert $x<y$)\\
 \\
 \tab $y := y-x$\\
 \\
@@ -1598,7 +1598,7 @@ $(x,y) := (a,b);$\\
 \\
 \uline{endwhile}\\
 \\
-postco: $\{ x = y = gcd(a,b)\}$\\
+postcondition: $\{ x = y = gcd(a,b)\}$\\
 \\
 \\
 \uline{Beweis}\\
@@ -1607,10 +1607,114 @@ $\{ (gcd(x,y) = gcd(a,b))^{\circled{A}} \wedge (x>0)^{\circled{B}} \wedge (y>0)^
 \\
 $\Rightarrow$\\
 \\
-$\{ (gcd(x-y,y) = gcd(a,b))^{\circled{1}} \wedge (x-y>0)^{\circled{2}} \wedge (y>0)^{\circled{3}} $\\
+$\{ (gcd(x-y,y) = gcd(a,b))^{\circled{1}} \wedge (x-y>0)^{\circled{2}} \wedge (y>0)^{\circled{3}} \}$\\
+\\
+$x := x-y$\\
+\\
+$\{ (gcd(x,y) = gcd(a,b)) \wedge (x>0) \wedge (y>0)\}$\\
+\\
+\\
+\\
+\\
+$\circled{1}\: gcd(x,y) = gcd(a,b)\: \circled{A}$\\
+\\
+\tab $<$ $gcd(a,b) = gcd(a-k*b,b)$ $>$\\
+\\
+$\Rightarrow gcd(x-1*y,y) = gcd(a,b)$\\
+\\
+\\
+$\circled{2} \:x>y\: \circled{E}$\\
+\\
+$\Rightarrow x-y>0$\\
+\\
+\\
+$\circled{3} = \circled{C}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Inv} $\{a>0 \wedge b>0\}$\\
+\\
+$\{ gcd(a,b) = gcd(a,b) \wedge a>0 \wedge b>0$\\
+\\
+$(x,y) := (a,b)$\\
+\\
+$\{ gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$\{ gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0 \wedge x=y$\\
+\\
+$\Rightarrow x=y=gcd(a,b)$\\
+\\
+$gcd(x,y) = gcd(x,x) = x = gcd(a,b)\: \checkmark$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
 \\
 
+\section{Zwoelfte Woche}
 
+\subsection{Euklid schnell}
+
+$\{a\geqslant 0 \wedge b\geqslant 0\}$\\
+\\
+$(x,y) := (a,b);$\\
+\\
+\uline{while} $y \neq 0$ \uline{do}\\
+\\
+\tab \uline{invariante} $gcd(a,b) = gcd(x,y) \wedge x\geqslant 0 \wedge y\geqslant 0$\\
+\\
+$(x,y) = (y, x\: mod\: y)$\\
+\\
+\uline{endwhile}\\
+\\
+$\{x = gcd(a,b)\}$\\
+\\
+$\rightarrow$ rueckwerts einsetzen\\
+\\
+\\
+Invar. Schleifenbedingung\\
+\\
+$\{ (gcd(a,b) = gcd(x,y))^{\circled{1}} \wedge (x\geqslant 0)^{\circled{2}} \wedge (y\geqslant 0)^{\circled{3}} \wedge (y\neq 0)^{\circled{4}}\}$\\
+\\
+VC\\
+$\Rightarrow$\\
+\\
+$\{ (gcd(a,b) = gcd(y,x\: mod\: y))^{\circled{A}} \wedge (y\geqslant 0)^{\circled{B}} \wedge (x\: mod\: y)^{\circled{C}} \}$ (PRE)\\
+\\
+$(x,y) = (y, x\: mod\: y)$\\
+\\
+$\{ (gcd(a,b) = gcd(x,y)) \wedge (x\geqslant 0) \wedge (y\geqslant 0) \}$ (POST=inv)\\
+\\
+\\
+Wir wissen: $\circled{1} \wedge \circled{2} \wedge\ \circled{3} \wedge \circled{4}$\\
+Zu zeigen: $\circled{A}$, $\circled{B}$, $\circled{C}$\\
+\\
+$\circled{A}$: $gcd(a,b) =^{\circled{1}} gcd(x,y) =^{\circled{*}} gcd(y, x\: mod\: y)\: \checkmark$\\
+\\
+$\circled{B}$: $\circled{3} \Rightarrow \circled{B}\: \checkmark$\\
+\\
+$\circled{C}$: 'mod' immer $\geqslant 0$, und $y \neq 0$ wegen $\circled{4}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\subsection{Erweiterter Euklid}
+
+\uline{Satz} Seien $a,b : \mathbb{Z}$ Dann gibt es Zahlen \\
+\\
+\tab $u,v: \mathbb{Z}$ mit\\
+\\
+\tab $u * a + v * b = gcd(a,b)$ (Bezout-Identitaet)\\
+\\
+\tab $\rightarrow$ \uline{nicht} eindeutig $\rightarrow$ unendlich\\
+\\
+$\qed$\\
+\\
+\\
 
 
 
