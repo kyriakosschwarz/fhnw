@@ -1656,6 +1656,46 @@ $gcd(x,y) = gcd(x,x) = x = gcd(a,b)\: \checkmark$\\
 
 \section{Zwoelfte Woche}
 
+\subsection{gcd langsam-schnell}
+
+$x \: mod \: y =0 \rightarrow$ Stop bei schnellem Algorithmus. $gcd(a,b) = gcd(0,y) = y$,\tab $x,y\geqslant0$\\
+\\
+$x=y \rightarrow$ Stop bei langsamen Algorithmus. $gcd(a,b) = gcd(x,x) = x$, \tab$x,y>0$\\
+\\
+$gcd(a,b) =^{\circled{*}} gcd(b, a\: mod\: b)$\\
+\\
+\\
+$a,b,k : \mathbb{Z}$\\
+\\
+$gcd(a,b) =^{\circled{1}} gcd(a-k*b, b)$\\
+\\
+Sei $b\neq0$\\
+\\
+$a = b* q + r \wedge 0 \leqslant r < |b|$,\tab $q = a\: div \:b$,\tab $r = a\: mod\: b$\\
+\\
+$a = b*(a\: div \:b) + (a\: mod\: b)$\\
+\\
+$a\: mod\: b =^{\circled{2}} a - b*(a\: div\: b)$\\
+\\
+\\
+$gcd(a,b)$\\
+\\
+\tab $<$ $\circled{1}$ $>$\\
+\\
+$= gcd(a-k*b,b)$\\
+\\
+\tab $<$ setze $k = a\: div\: b$ $>$\\
+\\
+$= gcd(a-(a\: div\: b)*b,b)$\\
+\\
+\tab $<$ $\circled{2}$ $>$\\
+\\
+$= gcd(a\: mod\: b, b) =^{<symm.>} gcd(b, a\: mod\: b)$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
 \subsection{Euklid schnell}
 
 $\{a\geqslant 0 \wedge b\geqslant 0\}$\\
@@ -1726,11 +1766,49 @@ $(u+u')*a + (v+v') *b = gcd(a,b)$\\
 \\
 Waehle z.B. $u' =b$ und $v' = -a$\\
 \\
-
-
-
-
-
+\\
+$\{ a\geqslant 0 \wedge b\geqslant 0\}$\\
+\\
+$(x,y) = (a,b)$\\
+\\
+$(u,u') = (1,0)$\\
+\\
+$(v,v')$\\
+\\
+$sign = +1$\\
+\\
+\\
+\uline{while} $y \neq 0$ \\
+\\
+$I_1$\tab \uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x\geqslant 0 \wedge y\geqslant 0$\\
+$I_2$\tab \tab \tab $u*x + u'*y = a$\\
+$I_3$\tab \tab \tab$v*x + v'*y = b$\\
+$I_4$\tab \tab \tab$u*v' - u'*v = sign$\\
+\\
+\tab \tab($I_1, I_2, I_3, I_4$ unverknuepft)\\
+\\
+\uline{do}\\
+\\
+\tab$(q,r) = (x\: div \:y, x\: mod\: y)$\\
+\\
+\tab$(x,y) = (y,r)$\\
+\\
+\tab$(u,u') = (q*u + u', u)$\\
+\\
+\tab$(v,v') = (q*v + v', v)$\\
+\\
+\tab$sign = -sign$\\
+\\
+\uline{endwhile}\\
+\\
+Post: $\{ x = gcd(a,b)\: \wedge $\\
+\tab $u*x = a\: \wedge$\\
+\tab $v*x = b\: \wedge$\\
+\tab $(sign *v')*a + (-sign*u')*b  = gcd(a,b) \}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 
 %\subsection{This is a subsection}

@@ -1715,11 +1715,60 @@ $\circled{C}$: 'mod' immer $\geqslant 0$, und $y \neq 0$ wegen $\circled{4}$\\
 $\qed$\\
 \\
 \\
-
-
-
-
-
+Wir konstruieren $u$ und $v$ fuer $a,b : \mathbb{N}$ durch Erweiterter Euklid\\
+\\
+\\
+$u*a + v*b = gcd(a,b)$\\
+\\
+$u' *a + v' *b =0$\\
+\\
+$(u+u')*a + (v+v') *b = gcd(a,b)$\\
+\\
+Waehle z.B. $u' =b$ und $v' = -a$\\
+\\
+\\
+$\{ a\geqslant 0 \wedge b\geqslant 0\}$\\
+\\
+$(x,y) = (a,b)$\\
+\\
+$(u,u') = (1,0)$\\
+\\
+$(v,v')$\\
+\\
+$sign = +1$\\
+\\
+\\
+\uline{while} $y \neq 0$ \\
+\\
+$I_1$\tab \uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x\geqslant 0 \wedge y\geqslant 0$\\
+$I_2$\tab \tab \tab $u*x + u'*y = a$\\
+$I_3$\tab \tab \tab$v*x + v'*y = b$\\
+$I_4$\tab \tab \tab$u*v' - u'*v = sign$\\
+\\
+\tab \tab($I_1, I_2, I_3, I_4$ unverknuepft)\\
+\\
+\uline{do}\\
+\\
+\tab$(q,r) = (x\: div \:y, x\: mod\: y)$\\
+\\
+\tab$(x,y) = (y,r)$\\
+\\
+\tab$(u,u') = (q*u + u', u)$\\
+\\
+\tab$(v,v') = (q*v + v', v)$\\
+\\
+\tab$sign = -sign$\\
+\\
+\uline{endwhile}\\
+\\
+Post: $\{ x = gcd(a,b)\: \wedge $\\
+\tab $u*x = a\: \wedge$\\
+\tab $v*x = b\: \wedge$\\
+\tab $(sign *v')*a + (-sign*u')*b  = gcd(a,b) \}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 
 %\subsection{This is a subsection}
