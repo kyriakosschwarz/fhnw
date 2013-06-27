@@ -1432,8 +1432,72 @@ Dann hat $D_{a,b}$ groesstes Element (wegen (1) hat es ueberhaupt ein Element, w
 \\
 $\qed$\\
 \\
+\\
+Def (GCD) Seien $a,b : \mathbb{Z}$ mit $a\neq 0 \vee b\neq 0$\\
+\\
+$gcd(a,b) = a\: gcd\: b = max(D_{a,b}) = $\\
+\\
+$(max d: \mathbb{Z} \:\vert\: d\backslash a \wedge d\backslash b\ : d)$\\
+\\
+$gcd(0,0) = 0 \leftarrow$ (selber so definiert - nicht einheitlich)\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\\
+\\
+$a\leqslant b$\\
+$c\leqslant d$\tab $+$\\
+\rule{2cm}{0.2mm}\\
+$a+c\leqslant b+d$\\
+\\
+\\
+$a\leqslant b$\\
+$c < d$\tab $+$\\
+\rule{2cm}{0.2mm}\\
+$a+c < b+d$\tab ($\circled{$<$}$ !)\\
+\\
+$<$ ist in diesem Fall wertvoller fuer den Beweis und deshalb behalten wir das so.
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$gcd(a,0) = |a|$\\
+$gcd(0,b) = |b|$\\
+$gcd(a,a) = |a|$\\
+$a\: gcd \: b = b\: gcd \: a$\tab Symmetrie\\
+$gcd(a,1) = |a|$\tab $1$ ist Null von $gcd$\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
+$gcd(a,b) = gcd(a\: mod\: b,b)$\\
+$a\backslash b \Rightarrow gcd(a,b) = a$\\
+$gcd(0,0) = 0$\\
+\\
+\\
+$gcd(a,b) = gcd(a+k*b,b)$ \tab $k:\mathbb{Z}$\\
+$gcd(a,b) = gcd(a,b + k*a)$\\
+$gcd(a,b) = gcd(a-k*b,b)$\\
+\\
+\\
+\uline{Beweis}\\
+\\
+1. Fall: $a=b=0$ \tab $a-k*b =0$  Trivial!\\
+\\
+2. Fall: $a\neq 0 \vee b\neq 0$\\
+\\
+Wir zeigen: $D_{a,b} = D_{a-k*b,b}$ damit auch GCDs gleich\\
+\\
+$d\in D_{a,b}$\\
+\\
+\tab $<$ Def. $D_{a,b}$ $>$\\
+\\
+$\Rightarrow d\backslash a \wedge d\backslash b$\\
+\\
+\tab $<$ Def $\backslash$ mit $k_1,k_2 : \mathbb{Z}$ $>$\\
+\\
 
-                              
+
+
+
+
 
 
 %\subsection{This is a subsection}
