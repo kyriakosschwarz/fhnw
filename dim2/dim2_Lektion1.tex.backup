@@ -1462,14 +1462,19 @@ $<$ ist in diesem Fall wertvoller fuer den Beweis und deshalb behalten wir das s
 \\
 \rule{\textwidth}{0.4mm}\\
 \\
+\uline{GCD} $a,b:\mathbb{Z}$\\
+\\
+\uline{Satz}\\
+\\
 $gcd(a,0) = |a|$\\
-$gcd(0,b) = |b|$\\
+$gcd(0,b) = |b|$\tab $0$ ist neutrales Element von $gcd$\\
 $gcd(a,a) = |a|$\\
 $a\: gcd \: b = b\: gcd \: a$\tab Symmetrie\\
-$gcd(a,1) = |a|$\tab $1$ ist Null von $gcd$\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
+$gcd(a,1) = |a|$\tab $1$ ist Null von $gcd$ (Destruktor)\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
 $gcd(a,b) = gcd(a\: mod\: b,b)$\\
 $a\backslash b \Rightarrow gcd(a,b) = a$\\
 $gcd(0,0) = 0$\\
+$gcd(a,b) = gcd(|a|,|b|), k:\mathbb{Z}$\\
 \\
 \\
 $gcd(a,b) = gcd(a+k*b,b)$ \tab $k:\mathbb{Z}$\\
@@ -1491,8 +1496,121 @@ $d\in D_{a,b}$\\
 \\
 $\Rightarrow d\backslash a \wedge d\backslash b$\\
 \\
-\tab $<$ Def $\backslash$ mit $k_1,k_2 : \mathbb{Z}$ $>$\\
+\tab $<$ Def. $\backslash$ mit $k_1,k_2 : \mathbb{Z}$ $>$\\
 \\
+$\Rightarrow a = k_1*d \wedge b = k_2*d$\\
+\\
+\tab $<$ Einsetzen fuer $a-k*b$ $>$\\
+\\
+$\Rightarrow a-k*b = k_1 *d - k*k_2*d \wedge b = k_2 *d$\\
+\\
+\tab $<$ Arith. $>$\\
+\\
+$\Rightarrow a -k*b = d(k_1 - k_2*k) \wedge b = k_2 *d$\\
+\\
+\tab $<$ Def. $\backslash$ mit $k_1 - k*k_2: \mathbb{Z}$ $>$\\
+\\
+\tab $\Rightarrow d \backslash (a-k*b) \wedge d\backslash b$\\
+\\
+\tab $<$ Def. $D_{a-k*b,b}$ $>$\\
+\\
+$\Rightarrow d \in D_{a-k*b,b}$\\
+\\
+\\
+$1/2 \qed$\\
+\\
+\\
+Bisher gezeigt: $D_{a,b} \subseteq D_{a-k*b,b}$\\
+\\
+Aufgabe: Zeigen Sie $D_{a-k*b,b} \subseteq D_{a,b}$
+\\
+\\
+$\qed$\\
+\\
+\\
+\uline{Satz} $b\backslash a \Rightarrow r=0$\\
+\\
+\uline{Beweis} $b\backslash a$, also $\exists{k} : \mathbb{Z}$ mit $a=k*b$\\
+\\
+ausserdem $a=b*q+r \wedge 0 \leqslant r < |b|$ (*)\\
+mit \uline{eindeutige} $q,r : \mathbb{Z}$\\
+\\
+Setze $q=k$ und $r=0$. Diese erfuellt Bedingung (*)\\
+\\
+Da $q,r$ eindeutig, folgt $r=0$.\\
+\\
+\uline{Beweis 2}\\
+\\
+$b \backslash a$, also $\exists{k}:\mathbb{Z}$ mit $ a = k*b$\\
+\\
+ausserdem ist $a = b*q+r \wedge 0 \leqslant r < |b|$\\
+also\\
+\tab $k*b = b*q+r$\\
+also\\
+\tab $r = b(k-q) < |b|$\\
+\\
+$r = b(k-q) \geqslant 0$\\
+also\\
+\tab $b(k-q) = |b(k-q)| = |b| |k-q|$\\
+\\
+$r = b(k-q) = |b| |k-q| < |b|$\\
+\\
+also mit $b \neq 0$ und $|b| > 0$ gilt\\
+\\
+\tab $|k-q| < 1$\\
+also\\
+\tab $k-q = 0$\\
+also\\
+\tab $k=q$\\
+also\\
+\tab $r=0$\\
+\\
+$\qed$\\
+\\
+\\
+$a\backslash b$, also $\exists{k_1} : \mathbb{Z}$ mit $b = k_1 * a$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\section{Elfte Woche}
+
+\subsection{Euklidischer Algorithmus}
+
+$\{a>0 \wedge b>0\}$\\
+\\
+$(x,y) := (a,b);$\\
+\\
+\uline{while} $x\neq y$ \uline{do}\\
+\\
+\uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
+\\
+\uline{if} $x>y$ \uline{then}\\
+\\
+\tab $x:= x-y$\\
+\\
+\uline{else} // $x<y$ (assert $x<y$)\\
+\\
+\tab $y := y-x$\\
+\\
+\uline{endif}\\
+\\
+\uline{endwhile}\\
+\\
+postco: $\{ x = y = gcd(a,b)\}$\\
+\\
+\\
+\uline{Beweis}\\
+\\
+$\{ (gcd(x,y) = gcd(a,b))^{\circled{A}} \wedge (x>0)^{\circled{B}} \wedge (y>0)^{\circled{C}} \wedge (x\neq y)^{\circled{D}} \wedge (x> y)^{\circled{E}} \}$\\
+\\
+$\Rightarrow$\\
+\\
+$\{ (gcd(x-y,y) = gcd(a,b))^{\circled{1}} \wedge (x-y>0)^{\circled{2}} \wedge (y>0)^{\circled{3}} $\\
+\\
+
+
 
 
 

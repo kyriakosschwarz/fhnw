@@ -24,3 +24,5 @@
 \contentsline {section}{\numberline {10}Zehnte Woche}{22}
 \contentsline {subsection}{\numberline {10.1}Eindeutigkeit}{22}
 \contentsline {subsection}{\numberline {10.2}GCD (Greatest Common Divisor)}{24}
+\contentsline {section}{\numberline {11}Elfte Woche}{27}
+\contentsline {subsection}{\numberline {11.1}Euklidischer Algorithmus}{27}
