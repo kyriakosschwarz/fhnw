@@ -1337,16 +1337,16 @@ $a = b * q + r \wedge 0 \leqslant r < |b|$\\
 \\
 \uline{Eindeutigkeit} Seien $a,b,q,r,q',r': \mathbb{Z}$ mit $b \neq 0$\\
 \\
-es gelte:\\
+Es gelte:\\
 \tab $a = b * q + r \wedge 0 \leqslant r < |b|$\\
-\tab $a = b * q' + r' \wedge 0 \leqslant r < |b|$\\
+\tab $a = b * q' + r' \wedge 0 \leqslant r' < |b|$\\
 \\
 Dann gilt $q=q'$ unr $r=r'$.\\
 \\
 \uline{Beweis:}\\
 \\
 $a = b * q + r$\\
-$a = b * q + r$\tab $-$\\
+$a = b * q' + r'$\tab $-$\\
 \rule{2cm}{0.2mm}\\
 $0=b(q-q') + (r-r')$\\
 $\rightarrow |b| |q-q'| = |r-r'|$\\
@@ -1356,7 +1356,7 @@ $0 \geqslant -r' < -|b|$\\
 \rule{2cm}{0.2mm}\\
 \\
 $-|b| < -r' \leqslant 0$\\
-$0 \leqslant r' < |b|$\tab $+$\\
+$0 \leqslant r < |b|$\tab $+$\\
 \rule{2cm}{0.2mm}\\
 $-|b| < r-r' < |b|$ \tab $\rightarrow$ echt kleiner $\circled{$<$}$ !\\
 \\
@@ -1437,7 +1437,7 @@ Def (GCD) Seien $a,b : \mathbb{Z}$ mit $a\neq 0 \vee b\neq 0$\\
 \\
 $gcd(a,b) = a\: gcd\: b = max(D_{a,b}) = $\\
 \\
-$(max d: \mathbb{Z} \:\vert\: d\backslash a \wedge d\backslash b\ : d)$\\
+$(max\: d: \mathbb{Z} \:\vert\: d\backslash a \wedge d\backslash b\ : d)$\\
 \\
 $gcd(0,0) = 0 \leftarrow$ (selber so definiert - nicht einheitlich)\\
 \\
@@ -1470,11 +1470,11 @@ $gcd(a,0) = |a|$\\
 $gcd(0,b) = |b|$\tab $0$ ist neutrales Element von $gcd$\\
 $gcd(a,a) = |a|$\\
 $a\: gcd \: b = b\: gcd \: a$\tab Symmetrie\\
-$gcd(a,1) = |a|$\tab $1$ ist Null von $gcd$ (Destruktor)\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
+$gcd(a,1) = 1$\tab $1$ ist Null von $gcd$ (Destruktor)\tab \tab ($a * 0 = 0$) ($a\: gcd \: 1 = 1$)\\
 $gcd(a,b) = gcd(a\: mod\: b,b)$\\
 $a\backslash b \Rightarrow gcd(a,b) = a$\\
 $gcd(0,0) = 0$\\
-$gcd(a,b) = gcd(|a|,|b|), k:\mathbb{Z}$\\
+$gcd(a,b) = gcd(|a|,|b|)$, $k:\mathbb{Z}$\\
 \\
 \\
 $gcd(a,b) = gcd(a+k*b,b)$ \tab $k:\mathbb{Z}$\\
@@ -1510,7 +1510,7 @@ $\Rightarrow a -k*b = d(k_1 - k_2*k) \wedge b = k_2 *d$\\
 \\
 \tab $<$ Def. $\backslash$ mit $k_1 - k*k_2: \mathbb{Z}$ $>$\\
 \\
-\tab $\Rightarrow d \backslash (a-k*b) \wedge d\backslash b$\\
+$\Rightarrow d \backslash (a-k*b) \wedge d\backslash b$\\
 \\
 \tab $<$ Def. $D_{a-k*b,b}$ $>$\\
 \\
@@ -1584,13 +1584,13 @@ $(x,y) := (a,b);$\\
 \\
 \uline{while} $x\neq y$ \uline{do}\\
 \\
-\uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
+\tab \uline{invariante} $gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0$\\
 \\
 \uline{if} $x>y$ \uline{then}\\
 \\
 \tab $x:= x-y$\\
 \\
-\uline{else} // $x<y$ (assert $x<y$)\\
+\uline{else} \tab// $x<y$ (assert $x<y$)\\
 \\
 \tab $y := y-x$\\
 \\
@@ -1598,7 +1598,7 @@ $(x,y) := (a,b);$\\
 \\
 \uline{endwhile}\\
 \\
-postco: $\{ x = y = gcd(a,b)\}$\\
+postcondition: $\{ x = y = gcd(a,b)\}$\\
 \\
 \\
 \uline{Beweis}\\
@@ -1607,7 +1607,7 @@ $\{ (gcd(x,y) = gcd(a,b))^{\circled{A}} \wedge (x>0)^{\circled{B}} \wedge (y>0)^
 \\
 $\Rightarrow$\\
 \\
-$\{ (gcd(x-y,y) = gcd(a,b))^{\circled{1}} \wedge (x-y>0)^{\circled{2}} \wedge (y>0)^{\circled{3}} $\\
+$\{ (gcd(x-y,y) = gcd(a,b))^{\circled{1}} \wedge (x-y>0)^{\circled{2}} \wedge (y>0)^{\circled{3}} \}$\\
 \\
 $x := x-y$\\
 \\
@@ -1648,7 +1648,7 @@ $\{ gcd(x,y) = gcd(a,b) \wedge x>0 \wedge y>0 \wedge x=y$\\
 \\
 $\Rightarrow x=y=gcd(a,b)$\\
 \\
-$gcd(x,y) = gcd(x,x) = x = gcd(a,b) \checkmark$\\
+$gcd(x,y) = gcd(x,x) = x = gcd(a,b)\: \checkmark$\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
