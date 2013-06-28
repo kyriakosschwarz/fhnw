@@ -1894,7 +1894,112 @@ $a *_n b = (a*b)mod\:n$\\
 \uline{3.} Zu jedem $a:M$ gibt es ein $b:M$ mit \\
 \tab $a\circ b = e = b\circ a$ (inverses Element) \tab ($e$: neutr. Elem. aus \uline{1.})\\
 \\
-
+\\
+\uline{Beispiel} ($\mathbb{Z}_n, +_n$)\\
+\\
+\uline{1.} $0 +_n a = a = a +_n 0$\\
+\\
+\uline{Beweis}\\
+\\
+$0 +_n a$\\
+\\
+$= (0+a)\: mod\: a$\\
+\\
+$= a\: mod\: n$\\
+\\
+$= a\:\checkmark$\tab (weil $0\leqslant a<n$)\\
+\\
+\\
+\uline{2.} $(a +_n b) +_n c = a +_n (b +_n c)$\\
+\\
+\uline{Bew.}\\
+\\
+$(a +_n b) +_n c$\\
+\\
+$= ((a+b)\: mod\: n + c)\: mod\: n$\\
+$[a+b = n*q + (a+b) \: mod\: n] \in:\mathbb{Z}$\\
+\\
+$= ((a+b) - n*q +c)\: mod\: n$\\
+\\
+$= ((a+b)+c)\: mod\: n$\\
+\\
+$= (a+(b+c))\: mod\: n$\\
+\\
+$=$ das gleiche rueckwerts\\
+\\
+\\
+\uline{3.} $a +_n ((-a)\: mod\: n)$\tab $\leftarrow$ inverses Element zu $a$\\
+\\
+$= (a+(-a) \: mod\: n)\: mod\: n$\\
+\\
+$=(a+ (-a))\: mod\: n$\\
+\\
+$= 0\: mod\: n$\\
+\\
+$= 0\: \checkmark$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Beispiel} ($\mathbb{Z}_n, *_n$)\\
+\\
+1) $1 *_n a = a = a *_n 1$\\
+\\
+2) $(a *_n b) *_n c = a *_n (b *_n c)$\\
+\\
+3) im allgemeinen nicht erfuellt\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+\uline{Def.} (\uline{reduzierte} Menge der Reste modulo $n$)\\
+\\
+\tab $\mathbb{Z}_{n}^{*} = \{ a:\mathbb{Z}\:\vert\: 0 \leqslant a< n \wedge gcd(a,n) = 1\}$\\
+\\
+\\
+\uline{Beispiel}\tab $\mathbb{Z}_6 = \{0,1,2,3,4,5\}$ \\
+\tab \tab $gcd(0,6)\:\:\:\:\:\: \circled{1}\: 2\: 3\:\: 2\: \circled{1}$\\
+\\
+\tab \tab $\mathbb{Z}_{6}^{+} = \{1,5\}$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$gcd(a,1) = 1$\\
+\\
+Es gibt $u,v : \mathbb{Z}$ mit\\
+\\
+\tab $u*a + v*n =1$\\
+\\
+also\\
+\\
+\tab $(u*a + v*n)\: mod\: n =1 \: mod \: n$\\
+\\
+also\\
+\\
+\tab $(u*a)\: mod\: n =1$\\
+\\
+also\\
+\\
+\tab $u *_n a =1$\\
+\\
+Wir brauchen dazu noch ein Algorithmus (erweit. Euklid) ohne $v$ um Werte zu berechnen.\\
+\\
+\\
+\uline{Beispiel:}\\
+\\
+$1 *_6 1 =1$\\
+\\
+$5 *_6 5 =1$\\
+\\
+Also: ($\mathbb{Z}_{n}^{\circled{*}\:!}, *_n$) ist eine Gruppe\\
+\\
+\\
+Aufgabe: Tabelle fuer ($\mathbb{Z}_{15}^{*}, *_{15})$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
 
 
 
