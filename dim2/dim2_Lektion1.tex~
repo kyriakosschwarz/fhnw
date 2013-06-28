@@ -1816,7 +1816,7 @@ Post: $\{ x = gcd(a,b)\: \wedge $\\
 
 \subsection{GCD (Fortsetzung)}
 
-$a,b : \mathbb{Z}$ Dann gibt es $u,v :\mathbb{Z}$ mit\\
+$a,b : \mathbb{Z}$\tab Dann gibt es $u,v :\mathbb{Z}$ mit\\
 \\
 \tab $u*a + v*b  = gcd(a,b)$\\
 \\
@@ -1927,7 +1927,7 @@ $= ((a+b)+c)\: mod\: n$\\
 \\
 $= (a+(b+c))\: mod\: n$\\
 \\
-$=$ das gleiche rueckwerts\\
+$=$ das gleiche rueckwaerts\\
 \\
 \\
 \uline{3.} $a +_n ((-a)\: mod\: n)$\tab $\leftarrow$ inverses Element zu $a$\\
@@ -1942,6 +1942,8 @@ $= 0\: \checkmark$\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
+\\
+\\
 \\
 \uline{Beispiel} ($\mathbb{Z}_n, *_n$)\\
 \\
@@ -1960,7 +1962,7 @@ $= 0\: \checkmark$\\
 \\
 \\
 \uline{Beispiel}\tab $\mathbb{Z}_6 = \{0,1,2,3,4,5\}$ \\
-\tab \tab $gcd(0,6)\:\:\:\:\:\: \circled{1}\: 2\: 3\:\: 2\: \circled{1}$\\
+\tab \tab $gcd(0,6)\:\:\:6\: \circled{1}\: 2\: 3\:\: 2\: \circled{1}$\\
 \\
 \tab \tab $\mathbb{Z}_{6}^{+} = \{1,5\}$\\
 \\
