@@ -1669,6 +1669,7 @@ $a,b,k : \mathbb{Z}$\\
 \\
 $gcd(a,b) =^{\circled{1}} gcd(a-k*b, b)$\\
 \\
+\\
 Sei $b\neq0$\\
 \\
 $a = b* q + r \wedge 0 \leqslant r < |b|$,\tab $q = a\: div \:b$,\tab $r = a\: mod\: b$\\
@@ -1702,11 +1703,13 @@ $\{a\geqslant 0 \wedge b\geqslant 0\}$\\
 \\
 $(x,y) := (a,b);$\\
 \\
-\uline{while} $y \neq 0$ \uline{do}\\
+\uline{while} $y \neq 0$ \\
 \\
 \tab \uline{invariante} $gcd(a,b) = gcd(x,y) \wedge x\geqslant 0 \wedge y\geqslant 0$\\
 \\
-$(x,y) = (y, x\: mod\: y)$\\
+\tab \uline{do}\\
+\\
+\tab \tab$(x,y) = (y, x\: mod\: y)$\\
 \\
 \uline{endwhile}\\
 \\
@@ -1715,16 +1718,16 @@ $\{x = gcd(a,b)\}$\\
 $\rightarrow$ rueckwerts einsetzen\\
 \\
 \\
-Invar. Schleifenbedingung\\
+Invar.$\circled{1}$ \tab\tab\tab\tab\tab\tab\tab Schleifenbedingung$\circled{4}$\\
 \\
 $\{ (gcd(a,b) = gcd(x,y))^{\circled{1}} \wedge (x\geqslant 0)^{\circled{2}} \wedge (y\geqslant 0)^{\circled{3}} \wedge (y\neq 0)^{\circled{4}}\}$\\
 \\
 VC\\
 $\Rightarrow$\\
 \\
-$\{ (gcd(a,b) = gcd(y,x\: mod\: y))^{\circled{A}} \wedge (y\geqslant 0)^{\circled{B}} \wedge (x\: mod\: y)^{\circled{C}} \}$ (PRE)\\
+$\{ (gcd(a,b) = gcd(y,x\: mod\: y))^{\circled{A}} \wedge (y\geqslant 0)^{\circled{B}} \wedge (x\: mod\: y \geqslant 0)^{\circled{C}} \}$ (PRE)\\
 \\
-$(x,y) = (y, x\: mod\: y)$\\
+\tab$(x,y) = (y, x\: mod\: y)$\\
 \\
 $\{ (gcd(a,b) = gcd(x,y)) \wedge (x\geqslant 0) \wedge (y\geqslant 0) \}$ (POST=inv)\\
 \\
@@ -1755,7 +1758,7 @@ $\circled{C}$: 'mod' immer $\geqslant 0$, und $y \neq 0$ wegen $\circled{4}$\\
 $\qed$\\
 \\
 \\
-Wir konstruieren $u$ und $v$ fuer $a,b : \mathbb{N}$ durch Erweiterter Euklid\\
+Wir konstruieren $u$ und $v$ fuer $a,b : \mathbb{N}$ durch Erweiterten Euklid\\
 \\
 \\
 $u*a + v*b = gcd(a,b)$\\
@@ -1773,7 +1776,7 @@ $(x,y) = (a,b)$\\
 \\
 $(u,u') = (1,0)$\\
 \\
-$(v,v')$\\
+$(v,v') = (0,1)$\\
 \\
 $sign = +1$\\
 \\
@@ -1788,7 +1791,6 @@ $I_4$\tab \tab \tab$u*v' - u'*v = sign$\\
 \tab \tab($I_1, I_2, I_3, I_4$ unverknuepft)\\
 \\
 \uline{do}\\
-\\
 \tab$(q,r) = (x\: div \:y, x\: mod\: y)$\\
 \\
 \tab$(x,y) = (y,r)$\\
@@ -1802,9 +1804,9 @@ $I_4$\tab \tab \tab$u*v' - u'*v = sign$\\
 \uline{endwhile}\\
 \\
 Post: $\{ x = gcd(a,b)\: \wedge $\\
-\tab $u*x = a\: \wedge$\\
-\tab $v*x = b\: \wedge$\\
-\tab $(sign *v')*a + (-sign*u')*b  = gcd(a,b) \}$\\
+\tab\tab $u*x = a\: \wedge$\\
+\tab\tab $v*x = b\: \wedge$\\
+\tab\tab $(sign *v')*a + (-sign*u')*b  = gcd(a,b) \}$\\
 \\
 \\
 \rule{\textwidth}{0.4mm}\\
@@ -2055,7 +2057,7 @@ $\{ x =1 \wedge u = n\} \leftarrow$ check!\\
 \\
 $inverse := (-sign * u')\: mod\: n$\\
 \\
-$\{inverse *_n a =1$\\
+$\{inverse *_n a =1\}$\\
 \rule{\textwidth}{0.4mm}\\
 
 
