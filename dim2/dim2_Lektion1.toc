@@ -33,3 +33,5 @@
 \contentsline {section}{\numberline {13}Dreizehnte Woche}{31}
 \contentsline {subsection}{\numberline {13.1}GCD (Fortsetzung)}{31}
 \contentsline {subsection}{\numberline {13.2}Restklassen}{32}
+\contentsline {section}{\numberline {14}Vierzehnte Woche}{35}
+\contentsline {subsection}{\numberline {14.1}Restklassen Fortsetzung}{35}
