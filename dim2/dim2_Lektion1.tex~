@@ -2031,13 +2031,32 @@ $u*a + v*m =1$\\
 \\
 \tab $u *_n a =1$\\
 \\
-
-
-
-
-
-
-
+\\
+$\{n\geqslant 0 \wedge a\geqslant 0 \wedge gcd(a,n) = 1\}$\\
+\tab $(x,y) := (n,a)$\\
+\tab $(u,u') := (1,0)$\\
+\tab $sign := +1$\\
+\\
+\uline{while} $y \neq 0$\\
+\\
+\tab \uline{invar} $gcd(x,y) = 1 \wedge x\geqslant 0 \wedge y\geqslant 0$\\
+\tab \tab $u*x + u' * y =n$\\
+\\
+\uline{do}\\
+\\
+\tab $(q,r) := (x \: div\: y, x\: mod\: y)$\\
+\tab $(x,y) := (y,r)$\\
+\tab $(u,u') := (q*u + u', u)$\\
+\tab $sign = -sign$\\
+\\
+\uline{endwhile}\\
+\\
+$\{ x =1 \wedge u = n\} \leftarrow$ check!\\
+\\
+$inverse := (-sign * u')\: mod\: n$\\
+\\
+$\{inverse *_n a =1$\\
+\rule{\textwidth}{0.4mm}\\
 
 
 

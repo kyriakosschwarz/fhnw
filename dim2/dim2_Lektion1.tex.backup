@@ -1962,6 +1962,75 @@ $= 0\: \checkmark$\\
 \\
 \tab \tab $\mathbb{Z}_{6}^{+} = \{1,5\}$\\
 \\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+$gcd(a,1) = 1$\\
+\\
+Es gibt $u,v : \mathbb{Z}$ mit\\
+\\
+\tab $u*a + v*n =1$\\
+\\
+also\\
+\\
+\tab $(u*a + v*n)\: mod\: n =1 \: mod \: n$\\
+\\
+also\\
+\\
+\tab $(u*a)\: mod\: n =1$\\
+\\
+also\\
+\\
+\tab $u *_n a =1$\\
+\\
+Wir brauchen dazu noch ein Algorithmus (erweit. Euklid) ohne $v$ um Werte zu berechnen.\\
+\\
+\\
+\uline{Beispiel:}\\
+\\
+$1 *_6 1 =1$\\
+\\
+$5 *_6 5 =1$\\
+\\
+Also: ($\mathbb{Z}_{n}^{\circled{*}\:!}, *_n$) ist eine Gruppe\\
+\\
+\\
+Aufgabe: Tabelle fuer ($\mathbb{Z}_{15}^{*}, *_{15})$\\
+\\
+\\
+\rule{\textwidth}{0.4mm}\\
+\\
+
+\section{Vierzehnte Woche}
+
+\subsection{Restklassen Fortsetzung}
+
+$+_n : \mathbb{Z}_n \times \mathbb{Z}_n \rightarrow \mathbb{Z}_n$\\
+\\
+$*_n$\\
+\\
+\\
+$a +_n b = (a+b) \: mod\: n$\\
+$a *_n b = (a * b)\: mod\: n$\\
+\\
+$a = b* q + r \wedge 0 \leqslant r < |b|$, \tab $q = a\: div\: b$, \tab $r = a\:mod\: b$\\
+\\
+\\
+($\mathbb{Z}_n, +_n$) ist Gruppe\\
+\\
+($\mathbb{Z}_n, *_n$) \uline{keine} Gruppe\tab (inverses Element existiert nicht)\\
+\\
+$gcd(a,n) =1$\\
+\\
+$u*a + v*m =1$\\
+\\
+\\
+\uline{Problem:} Gegeben $n:\mathbb{N}^{>0},\:a:\mathbb{Z}_{n}^{*}$\\
+\\
+\tab Finde $u = a^{-1} : \mathbb{Z}_{n}^{*} $ mit\\
+\\
+\tab $u *_n a =1$\\
+\\
 
 
 
