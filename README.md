@@ -1,4 +1,2 @@
 fhnw
 ====
-
-school related stuff..
