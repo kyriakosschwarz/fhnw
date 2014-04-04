@@ -5,6 +5,31 @@ import Jama.Matrix;
 
 public class HilfsFunktionen {
 	
+    public static double delta = 0.000001;
+    
+    public static boolean equal(Matrix x, Matrix y)
+    {
+        double[][] x_arr = x.getArray();
+        double[][] y_arr = y.getArray();
+ 
+        if (x_arr.length != y_arr.length) {
+            return false;
+        }
+ 
+        for (int i = 0; i < x_arr.length; ++i) {
+            if (x_arr[i].length != y_arr[i].length) {
+                return false;
+            }
+            for (int j = 0; j < x_arr[i].length; ++j) {
+                if (Math.abs(x_arr[i][j] - y_arr[i][j]) > HilfsFunktionen.delta) {
+                    return false;
+                }
+            }
+        }
+ 
+        return true;
+    }
+	
 	public static double spektralradius(Matrix A) {
 		EigenvalueDecomposition ed = new EigenvalueDecomposition(A);
 		
@@ -256,7 +281,7 @@ public class HilfsFunktionen {
 	//    0     0    -1     3     2
 	//    0     0     0    -1     3
 	
-	// Example: generateBigDiagonal(5, true, -1, 3, 2) // opposite direction
+	// Example: generateBigDiagonal(5, false, -1, 3, 2) // opposite direction
 	//    0     0     0    -1     3
     //	  0     0    -1     3     2
     //	  0    -1     3     2     0
@@ -523,5 +548,20 @@ public class HilfsFunktionen {
 			 }
 		 }
 		 return is;
+	 }
+	 
+	 public static boolean isQuadratic(Matrix x) {
+		 return x.getRowDimension() == x.getColumnDimension();
+	 }
+	 
+	 public static boolean isInvertible(Matrix x) {
+		 double[] eigs = x.eig().getRealEigenvalues();
+		 for (double eig : eigs) {
+             if (eig == 0) {
+                 return false;
+             }
+         }
+         
+         return true;
 	 }
 }
