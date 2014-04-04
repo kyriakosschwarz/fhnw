@@ -23,7 +23,9 @@ public class HilfsFunktionen {
 	}
 	
 	// das optimale omega fuer SOR
-	public static double omega(Matrix A) {
+	public static double omega(Matrix A) throws Exception {
+		
+		if(!HilfsFunktionen.isTridiagonal(A)) throw new Exception("is not tridiagonal!");
 		
 		Matrix L = HilfsFunktionen.getLowerMatrix(A);
 		
@@ -472,5 +474,54 @@ public class HilfsFunktionen {
 	      }
 	      System.out.print("\n");
 	 }
-}
+	 
+	 public static double[] fillxOld(int size, double val) {
+		 double[] a = new double[size];
+		 
+		 for(int i =0; i<size; i++) {
+			 a[i] = val;
+		 }
+		 
+		 return a;
+	 }
+	 
+	 public static double normMatrixInf(Matrix A) {
+		 int size = A.getColumnDimension();
+		 double max = 0;
+		 for(int i = 0; i< size; i++) {
+			 double sum = 0;
+			 for(int j = 0; j< size; j++) {
+				 sum += Math.abs(A.get(i, j)); 
+			 }
+			 if (sum > max) max = sum;
+		 }
+		 return max;
+	 }
+	 
+	 public static double normMatrixTwo(Matrix A) {
+		 return Math.sqrt(HilfsFunktionen.spektralradius(A.transpose().times(A)));
+	 }
+	 
+	 public static boolean isConvergent(Matrix A) {
+		 return HilfsFunktionen.spektralradius(A) < 1;
+	 }
+	 
+	 public static boolean isTridiagonal(Matrix A) {
+		 boolean is = true;
+		 int n = A.getColumnDimension();
+		 for(int i = 0; i<n; i++){
+			 for(int j =0; j<n; j++){
+				 if(((j==i)||(j==i-1)||(j==i+1))&&(A.get(i, j)==0)) {
+					 is = false;
+					 System.out.println("i: "+i +"   , j: "+j +"   , val: " + A.get(i, j));
+				 }
+				 if(((j<=i-2)||(j>=i+2))&&(A.get(i, j)!=0)) {
+					 is = false;
+					 System.out.println("i: "+i +"   , j: "+j +"   , val: " + A.get(i, j));
 
+				 }
+			 }
+		 }
+		 return is;
+	 }
+}
