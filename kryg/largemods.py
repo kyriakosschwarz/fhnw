@@ -2,7 +2,7 @@
 
 # a^b mod m loesen
 
-a = 920
+a = 903	
 b = 17
 m = 2773
 

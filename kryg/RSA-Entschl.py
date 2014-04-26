@@ -2,7 +2,8 @@
 
 # Das RSA-Verfahren - Entschluesselung (Beispiel vom RSA Skript, Seite 9)
 
-frase = '0948234210841444266323900778077402191786'
+#frase = '23551505098561251305962706011712481096205082503'
+frase = '2355150509850061251305962706011700012481096205082503'
 
 n = 2773
 
@@ -85,15 +86,27 @@ def largemod(a,b,m):
 	if(len(strresult) == 3):
 		strresult = '0' + strresult
 		
+	if(len(strresult) == 2):
+		strresult = '00' + strresult
+		
+	if(len(strresult) == 1):
+		strresult = '000' + strresult
+		
 	return strresult
 
 #size = len(frase)
 
 finalstring = ''
 
+LM = []
+
 for i in range(frsize/4):
-	finalstring = finalstring + largemod(int(Li[i]), e, n)
+	next = largemod(int(Li[i]), e, n)
+	finalstring = finalstring + next
 	#print largemod(int(codiert[i]), e, n)
+	LM.append(next)
+	
+print LM	
 	
 print finalstring #this comes with an extra '17' at the end
 

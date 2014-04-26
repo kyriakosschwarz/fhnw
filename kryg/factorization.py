@@ -4,7 +4,8 @@
 
 # source: http://stackoverflow.com/questions/16996217/prime-factorization-list
 
-n = 105
+#n = 105
+n = 1962713
 
 def primes(n):
     primfac = []
