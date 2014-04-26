@@ -2,8 +2,8 @@
 
 # extended euclidian algorithm
 
-e = 5
-fin = 1959888 # fi von n
+e = 42
+fin = 11 # fi von n
  
 x = e
 y = fin

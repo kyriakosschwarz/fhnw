@@ -2,9 +2,9 @@
 
 # a^b mod m loesen
 
-a = 903	
-b = 17
-m = 2773
+a = 61	
+b = 5
+m = 91
 
 binb = bin(b)
 
