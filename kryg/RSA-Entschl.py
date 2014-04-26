@@ -44,7 +44,34 @@ dic = {'-': '00',
 	   'W': '23', 
 	   'X': '24', 
 	   'Y': '25', 
-	   'Z': '26' }
+	   'Z': '26',
+	   '00': '-',
+	   '01': 'A',
+	   '02': 'B',
+	   '03': 'C', 
+	   '04': 'D', 
+	   '05': 'E', 
+	   '06': 'F', 
+	   '07': 'G', 
+	   '08': 'H', 
+	   '09': 'I', 
+	   '10': 'J', 
+	   '11': 'K', 
+	   '12': 'L', 
+	   '13': 'M', 
+	   '14': 'N',
+	   '15': 'O', 
+	   '16': 'P', 
+	   '17': 'Q', 
+	   '18': 'R', 
+	   '19': 'S', 
+	   '20': 'T', 
+	   '21': 'U', 
+	   '22': 'V', 
+	   '23': 'W', 
+	   '24': 'X', 
+	   '25': 'Y', 
+	   '26': 'Z' }
 	   
 def largemod(a,b,m):
 	binb = bin(b)
@@ -94,9 +121,12 @@ def largemod(a,b,m):
 		
 	return strresult
 
+
 #size = len(frase)
 
 finalstring = ''
+
+text = ''
 
 LM = []
 
@@ -105,12 +135,13 @@ for i in range(frsize/4):
 	finalstring = finalstring + next
 	#print largemod(int(codiert[i]), e, n)
 	LM.append(next)
+	text = text + dic[next[:2]] + dic[next[2:]]
 	
 print LM	
 	
 print finalstring #this comes with an extra '17' at the end
 
-
+print text
 
 
 
