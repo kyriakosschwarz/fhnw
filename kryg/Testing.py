@@ -5,16 +5,10 @@
 import math
 from fractions import *
 
-L = [5,3,2,1,4]
+def enth_root(val, n):
+    ret = int(val**(1./n))
+    return ret + 1 if (ret + 1) ** n == val else ret
 
+x = math.pow(3, 4)
 
-
-def getres(L):
-	if(len(L) == 1):
-		return Fraction(L.pop(0), 1)
-	else:
-		return Fraction(L.pop(0), 1) + Fraction(1, getres(L))
-		
-res = getres(L)
-
-print res	
+print enth_root(x,4)

@@ -4,7 +4,7 @@
 
 from fractions import gcd
 
-n = 216
+n = 13
 
 L = []
 
