@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# doesn't work yet
+
 # format(b, '#06b')
 
 m = 0b110001101100101
