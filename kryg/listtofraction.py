@@ -7,19 +7,13 @@ from fractions import *
 
 L = [5,3,2,1,4]
 
-res  = Fraction(L.pop(0),1)
 
-def getres(res, L):
+def getres(L):
 	if(len(L) == 1):
-		return Fraction(1, L.pop(0))
+		return Fraction(L.pop(0), 1)
 	else:
-		item = L.pop(0)
-		minifrac = Fraction(item,1)
-		if(len(L) == 1):
-			return res + Fraction(1, item + getres(minifrac, L))
-		else:
-			return res + Fraction(1, getres(minifrac, L))
+		return Fraction(L.pop(0), 1) + Fraction(1, getres(L))
 		
-res = getres(res,L)
+res = getres(L)
 
 print res	

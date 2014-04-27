@@ -5,7 +5,10 @@
 import math
 from fractions import *
 
-a = Fraction(37,7)
+e = 773
+n = 2021
+
+a = Fraction(e,n)
 
 def getxi(a):
 	num = a.numerator

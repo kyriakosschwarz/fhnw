@@ -1,12 +1,20 @@
 #!/usr/bin/python
 
-# ignore - only testing
+# das umgekehrte der KE
 
 import math
 from fractions import *
 
-a = Fraction(10,5)
+L = [5,3,2,1,4]
 
-b = Fraction(1,a)
 
-print b
+
+def getres(L):
+	if(len(L) == 1):
+		return Fraction(L.pop(0), 1)
+	else:
+		return Fraction(L.pop(0), 1) + Fraction(1, getres(L))
+		
+res = getres(L)
+
+print res	
