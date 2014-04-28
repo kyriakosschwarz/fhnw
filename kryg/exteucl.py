@@ -2,8 +2,10 @@
 
 # extended euclidian algorithm
 
-e = 42
-fin = 11 # fi von n
+e = 18439769619
+p = 815333
+q = 667181
+fin = (p-1)*(q-1) # fi von n
  
 x = e
 y = fin

@@ -5,8 +5,8 @@
 import math
 from fractions import *
 
-e = 773
-n = 2021
+e = 18439769619
+n = 543974686273
 
 a = Fraction(e,n)
 

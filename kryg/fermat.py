@@ -14,7 +14,9 @@ b = t-s
 
 print a,b
 
-n = a * b
+#n = a * b
+
+n = 11209459057
 
 def issquare(n):
 	x = int(math.floor(math.sqrt(n)))
